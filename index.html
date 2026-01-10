@@ -3,21 +3,21 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teuku Rijul — Freelancer Premium | Cyber Architecture & Security</title>
-  <meta name="description" content="Freelancer elite di bidang arsitektur siber & keamanan digital. Layanan premium: cepat, rahasia, hasil berkualitas tinggi." />
-  <meta name="keywords" content="Teuku Rijul, freelancer Indonesia, cyber architecture, cybersecurity, jasa profesional, website pemerintah, sistem aman" />
+  <title>Teuku Rijul — Software Engineer | Full-Stack & Cloud Architecture</title>
+  <meta name="description" content="Software engineer berpengalaman lebih dari 5 tahun dalam pengembangan aplikasi web dan sistem terdistribusi. Spesialis React, Node.js, dan arsitektur cloud." />
+  <meta name="keywords" content="Teuku Rijul, software engineer Indonesia, full-stack developer, cloud architecture, React, Node.js, DevOps, Aceh" />
   <meta name="author" content="Teuku Rijul" />
   <link rel="canonical" href="https://teukurijul.github.io" />
 
   <!-- Open Graph / Social -->
-  <meta property="og:title" content="Teuku Rijul — Freelancer Premium" />
-  <meta property="og:description" content="Layanan freelance elite dengan standar keamanan, kecepatan, dan kualitas tertinggi." />
+  <meta property="og:title" content="Teuku Rijul — Software Engineer" />
+  <meta property="og:description" content="Software engineer berpengalaman lebih dari 5 tahun dalam pengembangan aplikasi web dan sistem terdistribusi." />
   <meta property="og:image" content="https://i.ibb.co.com/N2Dkh1Vj/IMG-20260110-223018.jpg" />
   <meta property="og:url" content="https://teukurijul.github.io" />
   <meta property="og:type" content="website" />
 
-  <!-- Favicon (opsional) -->
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>" />
+  <!-- Favicon -->
+  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" />
 
   <!-- Font: Poppins – clean & professional -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -58,14 +58,14 @@
     }
 
     /* GLOBAL TYPOGRAPHY */
-    h1, h2, h3 {
+    h1, h2, h3, h4 {
       font-weight: 700;
       line-height: 1.2;
     }
     h1 { font-size: 48px; }
     h2 { font-size: 34px; margin-bottom: 24px; }
-    h3 { font-size: 20px; margin-bottom: 12px; }
-
+    h3 { font-size: 24px; margin-bottom: 16px; }
+    h4 { font-size: 20px; margin-bottom: 12px; }
     p {
       margin-bottom: 16px;
       color: var(--text-muted);
@@ -88,6 +88,12 @@
       background-clip: text;
       color: transparent;
       letter-spacing: -0.5px;
+    }
+    .hero-subtitle {
+      font-size: 22px;
+      font-weight: 500;
+      color: var(--accent);
+      margin-bottom: 16px;
     }
     .hero p {
       font-size: 19px;
@@ -137,19 +143,45 @@
       border: 3px solid var(--accent);
       box-shadow: var(--shadow-medium);
     }
-    .price-range {
-      font-weight: 600;
-      font-size: 19px;
-      color: var(--accent);
-      margin-top: 12px;
+    .philosophy {
+      background: #f1f5f9;
+      padding: 24px;
+      border-radius: 12px;
+      border-left: 4px solid var(--accent);
     }
 
-    /* CARDS */
-    .grid {
+    /* EDUCATION & EXPERIENCE */
+    .timeline-item {
+      margin-bottom: 32px;
+      padding-bottom: 32px;
+      border-bottom: 1px solid var(--border);
+    }
+    .timeline-item:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+    .timeline-date {
+      color: var(--accent);
+      font-weight: 600;
+      margin-bottom: 4px;
+    }
+    .timeline-title {
+      font-size: 20px;
+      margin-bottom: 8px;
+    }
+    .timeline-org {
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* PROJECTS */
+    .projects-grid {
       display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 28px;
     }
-    .card {
+    .project-card {
       background: white;
       border-radius: 16px;
       padding: 28px;
@@ -157,54 +189,104 @@
       box-shadow: var(--shadow-light);
       transition: all 0.3s ease;
     }
-    .card:hover {
+    .project-card:hover {
       transform: translateY(-6px);
       box-shadow: var(--shadow-hover);
     }
-    .price {
-      font-size: 20px;
-      font-weight: 700;
+    .tech-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 16px;
+    }
+    .tech-tag {
+      background: #dbeafe;
       color: var(--accent);
-      margin-top: 12px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
     }
 
-    /* PORTFOLIO */
-    .portfolio-items {
+    /* SKILLS */
+    .skills-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 24px;
     }
-    .portfolio-item {
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: var(--shadow-light);
-      aspect-ratio: 16/9;
-      background: #e2e8f0;
+    .skill-category h4 {
+      color: var(--accent);
+      margin-bottom: 16px;
+    }
+    .skill-list {
+      list-style: none;
+    }
+    .skill-list li {
+      padding: 8px 0;
       display: flex;
       align-items: center;
-      justify-content: center;
-      color: var(--text-muted);
-      font-weight: 500;
+    }
+    .skill-list li::before {
+      content: "•";
+      color: var(--accent);
+      font-weight: bold;
+      display: inline-block;
+      width: 1em;
+      margin-right: 8px;
     }
 
     /* CERTIFICATIONS */
-    .cert-list {
-      list-style: none;
-      padding: 0;
+    .certifications-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 24px;
     }
-    .cert-list li {
-      padding: 14px 0;
-      border-bottom: 1px dashed var(--border);
+    .cert-card {
+      background: white;
+      border-radius: 16px;
+      padding: 24px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-light);
+    }
+    .cert-provider {
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    .cert-year {
+      background: #dbeafe;
+      color: var(--accent);
+      padding: 2px 12px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      display: inline-block;
+      margin-top: 8px;
+    }
+
+    /* CONTACT */
+    .contact-info {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 24px;
+      margin-top: 24px;
+    }
+    .contact-item {
       display: flex;
       align-items: center;
+      gap: 12px;
     }
-    .cert-list li:last-child {
-      border: none;
-    }
-    .cert-icon {
-      margin-right: 12px;
+    .contact-icon {
+      width: 48px;
+      height: 48px;
+      background: #dbeafe;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       color: var(--accent);
       font-weight: bold;
+      font-size: 20px;
     }
 
     /* SOCIALS */
@@ -230,43 +312,6 @@
     .social-icon img {
       width: 30px;
       height: 30px;
-    }
-
-    /* REVIEWS */
-    .reviews-meta {
-      text-align: center;
-      color: var(--text-muted);
-      margin-bottom: 28px;
-      font-size: 17px;
-    }
-    .reviews-slider {
-      display: flex;
-      gap: 24px;
-      overflow-x: hidden;
-      padding: 10px 0;
-    }
-    .review-card {
-      min-width: 290px;
-      background: white;
-      padding: 26px;
-      border-radius: 16px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-light);
-    }
-    .stars {
-      color: #f59e0b;
-      margin: 6px 0 14px;
-      font-size: 16px;
-    }
-
-    /* FOOTER */
-    footer {
-      text-align: center;
-      color: var(--text-muted);
-      padding: 36px 0;
-      font-size: 14px;
-      border-top: 1px solid var(--border);
-      margin-top: 20px;
     }
 
     /* WHATSAPP BUTTON */
@@ -310,12 +355,14 @@
       .section { padding: 40px 24px; }
       h1 { font-size: 38px; }
       h2 { font-size: 28px; }
+      h3 { font-size: 22px; }
     }
 
     @media (max-width: 600px) {
       .hero { padding: 70px 16px 60px; }
       h1 { font-size: 30px; }
       .hero p { font-size: 17px; }
+      .hero-subtitle { font-size: 18px; }
       .about-grid { gap: 32px; }
       .profile-img { width: 190px; height: 190px; }
       .section { padding: 32px 16px; }
@@ -328,7 +375,8 @@
     <!-- HERO -->
     <section class="hero fade-in" data-animate>
       <h1>Teuku Rijul</h1>
-      <p>Freelancer Elite • Cyber Architecture • Keamanan Digital • Solusi Profesional</p>
+      <div class="hero-subtitle">Software Engineer • Full-Stack Developer • Cloud Architect</div>
+      <p>Software engineer yang bersemangat dengan pengalaman lebih dari 5 tahun dalam pengembangan aplikasi web dan sistem terdistribusi. Mengkhususkan diri dalam React, Node.js, dan arsitektur cloud.</p>
       <a class="cta" href="https://wa.me/62895328323138" target="_blank" rel="noopener">Hubungi via WhatsApp</a>
     </section>
 
@@ -336,62 +384,168 @@
     <section class="section fade-in" data-animate>
       <h2>Tentang Saya</h2>
       <div class="about-grid">
-        <img class="profile-img" src="https://i.ibb.co.com/N2Dkh1Vj/IMG-20260110-223018.jpg" alt="Foto Profil Teuku Rijul – Freelancer Premium" loading="lazy" />
+        <img class="profile-img" src="https://i.ibb.co.com/N2Dkh1Vj/IMG-20260110-223018.jpg" alt="Foto Profil Teuku Rijul – Software Engineer" loading="lazy" />
         <div>
-          <p>Saya adalah freelancer premium lulusan TKJ dengan spesialisasi di bidang <strong>arsitektur siber</strong> dan <strong>keamanan digital</strong>. Setiap proyek saya tangani dengan standar elite: presisi, kerahasiaan, kecepatan, dan hasil yang melebihi ekspektasi.</p>
-          <p>Dengan lebih dari <strong>3.000 ulasan ★★★★★</strong>, saya berkomitmen memberikan layanan profesional untuk klien korporat, UMKM, maupun instansi pemerintah.</p>
-          <div class="price-range">Rentang Harga Jasa: <span>IDR 1.999.999 — IDR 5.999.999</span></div>
+          <p>Saya percaya dalam menulis kode yang tidak hanya berfungsi tetapi juga elegan dan mudah dipelihara. Pendekatan saya menggabungkan keunggulan teknis dengan desain yang berpusat pada pengguna untuk menciptakan solusi yang benar-benar memecahkan masalah.</p>
+          <div class="philosophy">
+            <p><strong>Filosofi Pribadi:</strong> Selain coding, saya bersemangat dalam berbagi pengetahuan, berkontribusi pada proyek open-source, dan terus belajar tentang teknologi yang sedang berkembang.</p>
+          </div>
+          <div class="contact-info">
+            <div class="contact-item">
+              <div class="contact-icon">📧</div>
+              <div>teukurijul@gmail.com</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">📍</div>
+              <div>Aceh, Indonesia</div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon">🎯</div>
+              <div>Pengembangan Full-stack, Arsitektur Cloud, DevOps</div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
+    <!-- EDUCATION -->
     <section class="section fade-in" data-animate>
-      <h2>Layanan Profesional</h2>
-      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
-        <div class="card">
-          <h3>Basic Service</h3>
-          <p>Layanan standar dengan hasil berkualitas dan dokumentasi lengkap.</p>
-          <div class="price">IDR 1.999.999</div>
+      <h2>Pendidikan</h2>
+      <div class="timeline-item">
+        <div class="timeline-date">2015 - 2019</div>
+        <div class="timeline-title">Sarjana Teknik Informatika</div>
+        <div class="timeline-org">Universitas Syiah Kuala</div>
+        <p>IPK: 3.75/4.00 • Aktif di UKM Teknologi Informasi • Lulusan Terbaik Fakultas</p>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">2012 - 2015</div>
+        <div class="timeline-title">SMK Negeri 1 Nisam / SMA Negeri 1 Banda Aceh</div>
+        <div class="timeline-org">Jurusan TKJ</div>
+        <p>Ketua OSIS • Juara Olimpiade Komputer Tingkat Provinsi</p>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section fade-in" data-animate>
+      <h2>Pengalaman Kerja</h2>
+      <div class="timeline-item">
+        <div class="timeline-date">Saat ini</div>
+        <div class="timeline-title">Software Engineer Senior</div>
+        <div class="timeline-org">PT. Teknologi Digital Indonesia</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Sebelumnya</div>
+        <div class="timeline-title">Software Engineer</div>
+        <div class="timeline-org">Startup Aceh Digital</div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Magang</div>
+        <div class="timeline-title">Pengembang Web</div>
+        <div class="timeline-org">Dinas Kominfo Aceh</div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section fade-in" data-animate>
+      <h2>Proyek Unggulan</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Sistem Manajemen Sekolah Aceh</h3>
+          <p>Platform komprehensif untuk manajemen sekolah di wilayah Aceh, mencakup absensi, nilai, dan komunikasi orang tua.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">Node.js</span>
+            <span class="tech-tag">MongoDB</span>
+            <span class="tech-tag">AWS</span>
+          </div>
         </div>
-        <div class="card">
-          <h3>Standard Service</h3>
-          <p>Fitur lebih lengkap, eksekusi cepat, dan dukungan pasca-proyek.</p>
-          <div class="price">IDR 2.999.999</div>
+        <div class="project-card">
+          <h3>Aplikasi Pariwisata Aceh</h3>
+          <p>Aplikasi mobile dan web untuk mempromosikan destinasi wisata di Aceh kepada wisatawan domestik dan internasional.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">React Native</span>
+            <span class="tech-tag">Express.js</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">Google Cloud</span>
+          </div>
         </div>
-        <div class="card">
-          <h3>Professional Service</h3>
-          <p>Fokus pada detail tinggi, arsitektur aman, dan optimasi performa.</p>
-          <div class="price">IDR 4.499.999</div>
-        </div>
-        <div class="card">
-          <h3>Premium Service</h3>
-          <p>Layanan prioritas 24/7, enkripsi end-to-end, dan SLA ketat.</p>
-          <div class="price">IDR 5.999.999</div>
+        <div class="project-card">
+          <h3>Sistem Monitoring Bencana Alam</h3>
+          <p>Sistem pemantauan bencana alam khusus untuk wilayah rawan bencana di Aceh dan Sumatera Utara.</p>
+          <div class="tech-tags">
+            <span class="tech-tag">Vue.js</span>
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">InfluxDB</span>
+            <span class="tech-tag">Azure</span>
+          </div>
         </div>
       </div>
     </section>
 
-    <!-- PORTFOLIO -->
+    <!-- SKILLS -->
     <section class="section fade-in" data-animate>
-      <h2>Portofolio Terpilih</h2>
-      <div class="portfolio-items">
-        <div class="portfolio-item">Sistem Informasi Pemerintah Daerah</div>
-        <div class="portfolio-item">Platform Keamanan Siber Korporat</div>
-        <div class="portfolio-item">Dashboard Analitik Real-Time</div>
-        <div class="portfolio-item">API Gateway Aman & Scalable</div>
+      <h2>Keterampilan Teknis</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h4>Bahasa Pemrograman</h4>
+          <ul class="skill-list">
+            <li>JavaScript/TypeScript</li>
+            <li>Python</li>
+            <li>Java</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Framework & Library</h4>
+          <ul class="skill-list">
+            <li>React & React Native</li>
+            <li>Node.js & Express</li>
+            <li>Vue.js</li>
+            <li>Next.js</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Database</h4>
+          <ul class="skill-list">
+            <li>MongoDB</li>
+            <li>PostgreSQL</li>
+            <li>MySQL</li>
+            <li>Redis</li>
+          </ul>
+        </div>
+        <div class="skill-category">
+          <h4>Tools & Platform</h4>
+          <ul class="skill-list">
+            <li>AWS</li>
+            <li>Google Cloud</li>
+            <li>Microsoft Azure</li>
+            <li>Docker & Kubernetes</li>
+            <li>Git & GitHub</li>
+          </ul>
+        </div>
       </div>
     </section>
 
     <!-- CERTIFICATIONS -->
     <section class="section fade-in" data-animate>
-      <h2>Sertifikasi & Kompetensi</h2>
-      <ul class="cert-list">
-        <li><span class="cert-icon">✓</span> Lulusan Terbaik Jurusan TKJ (Teknik Komputer & Jaringan)</li>
-        <li><span class="cert-icon">✓</span> Spesialis Arsitektur Infrastruktur Siber</li>
-        <li><span class="cert-icon">✓</span> Ahli Keamanan Jaringan & Enkripsi Data</li>
-        <li><span class="cert-icon">✓</span> Pengembangan Sistem dengan Standar ISO/IEC 27001</li>
-      </ul>
+      <h2>Sertifikasi</h2>
+      <div class="certifications-grid">
+        <div class="cert-card">
+          <h3>AWS Certified Developer - Associate</h3>
+          <div class="cert-provider">Amazon Web Services</div>
+          <div class="cert-year">2023</div>
+        </div>
+        <div class="cert-card">
+          <h3>Google Professional Cloud Developer</h3>
+          <div class="cert-provider">Google Cloud</div>
+          <div class="cert-year">2022</div>
+        </div>
+        <div class="cert-card">
+          <h3>Microsoft Certified: Azure Developer Associate</h3>
+          <div class="cert-provider">Microsoft</div>
+          <div class="cert-year">2021</div>
+        </div>
+      </div>
     </section>
 
     <!-- SOCIALS -->
@@ -410,30 +564,16 @@
       </div>
     </section>
 
-    <!-- REVIEWS -->
-    <section class="section fade-in reviews" data-animate>
-      <h2>Ulasan Klien</h2>
-      <div class="reviews-meta">Rating rata-rata: <strong>★★★★★</strong> — Lebih dari 3.000 ulasan positif</div>
-      <div class="reviews-slider">
-        <div class="review-card">
-          <strong>Rahmat S.</strong>
-          <div class="stars">★★★★★</div>
-          <p>"Pelayanan sangat baik dan profesional. Sangat direkomendasikan!"</p>
-        </div>
-        <div class="review-card">
-          <strong>Andi P.</strong>
-          <div class="stars">★★★★★</div>
-          <p>"Kerja cepat dan rapi, hasil sangat bagus."</p>
-        </div>
-        <div class="review-card">
-          <strong>Dewi L.</strong>
-          <div class="stars">★★★★★</div>
-          <p>"Profesional, bertanggung jawab, dan hasil memuaskan."</p>
-        </div>
+    <!-- COLLABORATION -->
+    <section class="section fade-in" data-animate>
+      <h2>Mari Berkolaborasi</h2>
+      <p>Saya sedang terbuka untuk peluang dan kolaborasi baru. Jangan ragu untuk menghubungi saya jika Anda memiliki proyek menarik atau hanya ingin berkenalan!</p>
+      <div style="text-align: center; margin-top: 24px;">
+        <a class="cta" href="https://wa.me/62895328323138" target="_blank" rel="noopener">Mulai Kolaborasi Sekarang</a>
       </div>
     </section>
 
-    <footer>© 2026 Teuku Rijul — Freelancer Premium. All Rights Reserved.</footer>
+    <footer>© 2026 Teuku Rijul — Software Engineer. All Rights Reserved.</footer>
   </div>
 
   <!-- WhatsApp Floating Button -->
@@ -453,18 +593,6 @@
     }, { threshold: 0.1 });
 
     document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
-
-    // Auto-scroll reviews (desktop only)
-    const slider = document.querySelector('.reviews-slider');
-    if (slider && window.innerWidth > 768) {
-      let index = 0;
-      const cards = Array.from(slider.children);
-      setInterval(() => {
-        index = (index + 1) % cards.length;
-        const offset = cards.slice(0, index).reduce((sum, card) => sum + card.offsetWidth + 24, 0);
-        slider.scrollTo({ left: offset, behavior: 'smooth' });
-      }, 4500);
-    }
   </script>
 </body>
 </html>
