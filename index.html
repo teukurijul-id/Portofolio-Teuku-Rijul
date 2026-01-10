@@ -1,251 +1,470 @@
 <!doctype html>
-<html lang="id" class="light">
+<html lang="id">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Teuku Rijul — Freelancer Premium</title>
-  <meta name="description" content="Teuku Rijul - Freelancer Premium dengan layanan cepat, aman, dan futuristik. Tema terang premium, elegan, dan super modern." />
-  <meta name="keywords" content="Freelancer Premium, Teuku Rijul, Jasa Profesional, Layanan Premium, Freelance Indonesia" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Teuku Rijul — Freelancer Premium | Cyber Architecture & Security</title>
+  <meta name="description" content="Freelancer elite di bidang arsitektur siber & keamanan digital. Layanan premium: cepat, rahasia, hasil berkualitas tinggi." />
+  <meta name="keywords" content="Teuku Rijul, freelancer Indonesia, cyber architecture, cybersecurity, jasa profesional, website pemerintah, sistem aman" />
   <meta name="author" content="Teuku Rijul" />
+  <link rel="canonical" href="https://teukurijul.github.io" />
 
-  <!-- Open Graph -->
+  <!-- Open Graph / Social -->
   <meta property="og:title" content="Teuku Rijul — Freelancer Premium" />
-  <meta property="og:description" content="Layanan freelance premium dengan kualitas tinggi, kecepatan, dan keamanan maksimal." />
-  <meta property="og:image" content="https://i.postimg.cc/0QRxwfnC/profile-optimized.jpg" />
+  <meta property="og:description" content="Layanan freelance elite dengan standar keamanan, kecepatan, dan kualitas tertinggi." />
+  <meta property="og:image" content="https://i.ibb.co.com/N2Dkh1Vj/IMG-20260110-223018.jpg" />
+  <meta property="og:url" content="https://teukurijul.github.io" />
   <meta property="og:type" content="website" />
 
-  <!-- Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <!-- Favicon (opsional) -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🔐</text></svg>" />
+
+  <!-- Font: Poppins – clean & professional -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
 
   <style>
     :root {
-      --bg:#f5f8ff;
-      --text:#1a2a3a;
-      --text-soft:#4a627a;
-      --panel:#ffffffee;
-      --accent:#0b66ff;
-      --accent-2:#00a3ff;
-      --border:#d6e4ff;
-      --radius:16px;
+      --bg: #f8fafc;
+      --text: #0f172a;
+      --text-muted: #64748b;
+      --panel: #ffffff;
+      --accent: #1e40af;
+      --accent-dark: #1e3a8a;
+      --border: #e2e8f0;
+      --radius: 18px;
+      --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.04);
+      --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.06);
+      --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
     }
 
     body {
-      margin:0;
-      background:var(--bg);
-      color:var(--text);
-      font-family:"Poppins", system-ui;
+      background-color: var(--bg);
+      color: var(--text);
+      font-family: "Poppins", system-ui, -apple-system, sans-serif;
+      line-height: 1.65;
       -webkit-font-smoothing: antialiased;
     }
 
-    .wrap {
-      max-width:1150px;
-      margin:34px auto;
-      padding:20px;
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    /* GLOBAL TYPOGRAPHY */
+    h1, h2, h3 {
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    h1 { font-size: 48px; }
+    h2 { font-size: 34px; margin-bottom: 24px; }
+    h3 { font-size: 20px; margin-bottom: 12px; }
+
+    p {
+      margin-bottom: 16px;
+      color: var(--text-muted);
     }
 
     /* HERO */
     .hero {
-      padding:90px 20px;
-      text-align:center;
-      border-radius:var(--radius);
-      background:linear-gradient(135deg, #ffffff, #e8f1ff);
-      border:1px solid var(--border);
-      box-shadow:0 10px 35px rgba(0,0,0,0.07);
+      padding: 100px 24px 90px;
+      text-align: center;
+      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-medium);
+      margin: 40px 0 60px;
     }
-    .hero h1 {font-size:44px;margin:0 0 10px;font-weight:700;}
-    .hero p {margin:0;font-size:18px;color:var(--text-soft);}    
+    .hero h1 {
+      margin: 0 0 16px;
+      background: linear-gradient(90deg, var(--accent), #3b82f6);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      letter-spacing: -0.5px;
+    }
+    .hero p {
+      font-size: 19px;
+      max-width: 680px;
+      margin: 0 auto 28px;
+      color: var(--text);
+    }
     .cta {
-      display:inline-block;
-      margin-top:22px;
-      padding:14px 32px;
-      border-radius:14px;
-      background:linear-gradient(90deg,var(--accent),var(--accent-2));
-      color:#fff;
-      text-decoration:none;
-      font-weight:700;
-      box-shadow:0 10px 25px rgba(0,102,255,0.18);
+      display: inline-block;
+      padding: 15px 40px;
+      background: linear-gradient(90deg, var(--accent), #2563eb);
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 18px;
+      border-radius: 16px;
+      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.25);
+      transition: all 0.3s ease;
+    }
+    .cta:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35);
     }
 
     /* SECTION */
     .section {
-      background:var(--panel);
-      border-radius:var(--radius);
-      padding:40px;
-      margin:40px 0;
-      border:1px solid var(--border);
-      box-shadow:0 10px 25px rgba(0,0,0,0.05);
+      background: var(--panel);
+      border-radius: var(--radius);
+      padding: 52px;
+      margin-bottom: 52px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-light);
     }
-    .row {
-      display:flex;
-      gap:32px;
-      flex-wrap:wrap;
-      align-items:center;
+
+    /* ABOUT */
+    .about-grid {
+      display: flex;
+      gap: 48px;
+      align-items: center;
+      flex-wrap: wrap;
     }
-    .profile {
-      width:210px;
-      height:210px;
-      border-radius:var(--radius);
-      object-fit:cover;
-      border:3px solid var(--accent-2);
-      box-shadow:0 10px 30px rgba(0,0,0,0.12);
+    .profile-img {
+      width: 240px;
+      height: 240px;
+      border-radius: var(--radius);
+      object-fit: cover;
+      border: 3px solid var(--accent);
+      box-shadow: var(--shadow-medium);
     }
-    h2 {margin:0 0 14px;font-size:30px;}
-    p {color:var(--text-soft);line-height:1.6;}
+    .price-range {
+      font-weight: 600;
+      font-size: 19px;
+      color: var(--accent);
+      margin-top: 12px;
+    }
 
     /* CARDS */
-    .cards {
-      display:grid;
-      grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-      gap:20px;
+    .grid {
+      display: grid;
+      gap: 28px;
     }
     .card {
-      padding:22px;
-      background:#ffffff;
-      border-radius:14px;
-      border:1px solid var(--border);
-      box-shadow:0 8px 25px rgba(0,0,0,0.04);
-      transition:0.25s;
+      background: white;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-light);
+      transition: all 0.3s ease;
     }
     .card:hover {
-      transform:translateY(-6px);
-      box-shadow:0 16px 35px rgba(0,0,0,0.09);
+      transform: translateY(-6px);
+      box-shadow: var(--shadow-hover);
     }
     .price {
-      margin-top:14px;
-      font-size:20px;
-      font-weight:700;
-      color:var(--accent);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-top: 12px;
+    }
+
+    /* PORTFOLIO */
+    .portfolio-items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+    .portfolio-item {
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: var(--shadow-light);
+      aspect-ratio: 16/9;
+      background: #e2e8f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--text-muted);
+      font-weight: 500;
+    }
+
+    /* CERTIFICATIONS */
+    .cert-list {
+      list-style: none;
+      padding: 0;
+    }
+    .cert-list li {
+      padding: 14px 0;
+      border-bottom: 1px dashed var(--border);
+      display: flex;
+      align-items: center;
+    }
+    .cert-list li:last-child {
+      border: none;
+    }
+    .cert-icon {
+      margin-right: 12px;
+      color: var(--accent);
+      font-weight: bold;
     }
 
     /* SOCIALS */
-    .socials {display:flex;gap:16px;margin-top:10px;justify-content:center;}
-    .socials img {
-      width:42px;
-      height:42px;
-      border-radius:12px;
-      box-shadow:0 10px 20px rgba(0,0,0,0.12);
+    .socials {
+      display: flex;
+      justify-content: center;
+      gap: 22px;
+      margin-top: 20px;
+    }
+    .social-icon {
+      width: 56px;
+      height: 56px;
+      border-radius: 16px;
+      background: white;
+      display: grid;
+      place-items: center;
+      box-shadow: var(--shadow-light);
+      transition: transform 0.25s ease;
+    }
+    .social-icon:hover {
+      transform: translateY(-4px);
+    }
+    .social-icon img {
+      width: 30px;
+      height: 30px;
     }
 
     /* REVIEWS */
-    .reviews .meta{text-align:center;color:var(--text-soft);margin-bottom:14px;}
-    .slider {display:flex;gap:16px;overflow:hidden;padding:6px;}
-    .rev {
-      min-width:260px;
-      background:#ffffff;
-      padding:18px;
-      border-radius:14px;
-      border:1px solid var(--border);
-      box-shadow:0 6px 20px rgba(0,0,0,0.05);
+    .reviews-meta {
+      text-align: center;
+      color: var(--text-muted);
+      margin-bottom: 28px;
+      font-size: 17px;
+    }
+    .reviews-slider {
+      display: flex;
+      gap: 24px;
+      overflow-x: hidden;
+      padding: 10px 0;
+    }
+    .review-card {
+      min-width: 290px;
+      background: white;
+      padding: 26px;
+      border-radius: 16px;
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-light);
+    }
+    .stars {
+      color: #f59e0b;
+      margin: 6px 0 14px;
+      font-size: 16px;
     }
 
     /* FOOTER */
-    footer {text-align:center;color:var(--text-soft);padding:36px 0;font-size:14px;}
+    footer {
+      text-align: center;
+      color: var(--text-muted);
+      padding: 36px 0;
+      font-size: 14px;
+      border-top: 1px solid var(--border);
+      margin-top: 20px;
+    }
 
     /* WHATSAPP BUTTON */
-    .wa {
-      position:fixed;
-      right:18px;
-      bottom:18px;
-      width:60px;
-      height:60px;
-      border-radius:50%;
-      background:#25D366;
-      display:grid;
-      place-items:center;
-      box-shadow:0 10px 28px rgba(0,184,107,0.18);
-      z-index:900;
+    .whatsapp-float {
+      position: fixed;
+      bottom: 28px;
+      right: 28px;
+      width: 66px;
+      height: 66px;
+      border-radius: 50%;
+      background: #25D366;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
+      z-index: 1000;
+      transition: transform 0.25s ease;
     }
-    .wa img {width:34px;height:34px;filter:brightness(0) invert(1);}    
+    .whatsapp-float:hover {
+      transform: scale(1.1);
+    }
+    .whatsapp-float img {
+      width: 34px;
+      height: 34px;
+      filter: brightness(0) invert(1);
+    }
 
-    /* Fade animation */
-    .fade {opacity:0;transform:translateY(10px);transition:.7s ease;}    
-    .fade.in {opacity:1;transform:none;}    
+    /* ANIMATIONS */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+    .fade-in.appear {
+      opacity: 1;
+      transform: translateY(0);
+    }
 
-    @media(max-width:640px){
-      .hero h1{font-size:32px;}
-      .profile{width:160px;height:160px;}
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .section { padding: 40px 24px; }
+      h1 { font-size: 38px; }
+      h2 { font-size: 28px; }
+    }
+
+    @media (max-width: 600px) {
+      .hero { padding: 70px 16px 60px; }
+      h1 { font-size: 30px; }
+      .hero p { font-size: 17px; }
+      .about-grid { gap: 32px; }
+      .profile-img { width: 190px; height: 190px; }
+      .section { padding: 32px 16px; }
     }
   </style>
 </head>
 <body>
-  <main class="wrap" id="main">
 
+  <div class="container">
     <!-- HERO -->
-    <section class="hero fade" data-fade>
+    <section class="hero fade-in" data-animate>
       <h1>Teuku Rijul</h1>
-      <p>Freelancer Premium • Cepat • Rahasia • Hasil Sangat Berkualitas</p>
-      <a class="cta" href="https://wa.me/62895328323138" target="_blank">Hubungi Sekarang</a>
+      <p>Freelancer Elite • Cyber Architecture • Keamanan Digital • Solusi Profesional</p>
+      <a class="cta" href="https://wa.me/62895328323138" target="_blank" rel="noopener">Hubungi via WhatsApp</a>
     </section>
 
     <!-- ABOUT -->
-    <section class="section fade" data-fade>
-      <div class="row">
-        <img class="profile" src="https://i.postimg.cc/0QRxwfnC/profile-optimized.jpg" alt="Foto Teuku Rijul" />
-        <div class="about">
-          <h2>Tentang Saya</h2>
-          <p>Saya adalah freelancer premium yang mengutamakan kualitas, kecepatan, keamanan, dan presisi. Setiap proyek dirancang dengan standar tinggi untuk memenuhi kebutuhan klien secara profesional.</p>
-          <div style="margin-top:12px;font-weight:600;color:var(--text)">Harga Jasa • <span style="color:var(--accent)">IDR 1.999.999 — IDR 5.999.999</span></div>
+    <section class="section fade-in" data-animate>
+      <h2>Tentang Saya</h2>
+      <div class="about-grid">
+        <img class="profile-img" src="https://i.ibb.co.com/N2Dkh1Vj/IMG-20260110-223018.jpg" alt="Foto Profil Teuku Rijul – Freelancer Premium" loading="lazy" />
+        <div>
+          <p>Saya adalah freelancer premium lulusan TKJ dengan spesialisasi di bidang <strong>arsitektur siber</strong> dan <strong>keamanan digital</strong>. Setiap proyek saya tangani dengan standar elite: presisi, kerahasiaan, kecepatan, dan hasil yang melebihi ekspektasi.</p>
+          <p>Dengan lebih dari <strong>3.000 ulasan ★★★★★</strong>, saya berkomitmen memberikan layanan profesional untuk klien korporat, UMKM, maupun instansi pemerintah.</p>
+          <div class="price-range">Rentang Harga Jasa: <span>IDR 1.999.999 — IDR 5.999.999</span></div>
         </div>
       </div>
     </section>
 
     <!-- SERVICES -->
-    <section class="section fade" data-fade>
-      <h2>Varian Jasa & Harga</h2>
-      <div class="cards">
-        <article class="card"><h3>Basic Service</h3><p>Layanan standar dengan hasil berkualitas.</p><div class="price">IDR 1.999.999</div></article>
-        <article class="card"><h3>Standard Service</h3><p>Fitur lebih lengkap, eksekusi lebih cepat.</p><div class="price">IDR 2.999.999</div></article>
-        <article class="card"><h3>Professional Service</h3><p>Fokus detail tinggi dan tingkat profesional.</p><div class="price">IDR 4.499.999</div></article>
-        <article class="card"><h3>Premium Service</h3><p>Layanan prioritas tertinggi, keamanan ekstra.</p><div class="price">IDR 5.999.999</div></article>
+    <section class="section fade-in" data-animate>
+      <h2>Layanan Profesional</h2>
+      <div class="grid" style="grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));">
+        <div class="card">
+          <h3>Basic Service</h3>
+          <p>Layanan standar dengan hasil berkualitas dan dokumentasi lengkap.</p>
+          <div class="price">IDR 1.999.999</div>
+        </div>
+        <div class="card">
+          <h3>Standard Service</h3>
+          <p>Fitur lebih lengkap, eksekusi cepat, dan dukungan pasca-proyek.</p>
+          <div class="price">IDR 2.999.999</div>
+        </div>
+        <div class="card">
+          <h3>Professional Service</h3>
+          <p>Fokus pada detail tinggi, arsitektur aman, dan optimasi performa.</p>
+          <div class="price">IDR 4.499.999</div>
+        </div>
+        <div class="card">
+          <h3>Premium Service</h3>
+          <p>Layanan prioritas 24/7, enkripsi end-to-end, dan SLA ketat.</p>
+          <div class="price">IDR 5.999.999</div>
+        </div>
       </div>
     </section>
 
+    <!-- PORTFOLIO -->
+    <section class="section fade-in" data-animate>
+      <h2>Portofolio Terpilih</h2>
+      <div class="portfolio-items">
+        <div class="portfolio-item">Sistem Informasi Pemerintah Daerah</div>
+        <div class="portfolio-item">Platform Keamanan Siber Korporat</div>
+        <div class="portfolio-item">Dashboard Analitik Real-Time</div>
+        <div class="portfolio-item">API Gateway Aman & Scalable</div>
+      </div>
+    </section>
+
+    <!-- CERTIFICATIONS -->
+    <section class="section fade-in" data-animate>
+      <h2>Sertifikasi & Kompetensi</h2>
+      <ul class="cert-list">
+        <li><span class="cert-icon">✓</span> Lulusan Terbaik Jurusan TKJ (Teknik Komputer & Jaringan)</li>
+        <li><span class="cert-icon">✓</span> Spesialis Arsitektur Infrastruktur Siber</li>
+        <li><span class="cert-icon">✓</span> Ahli Keamanan Jaringan & Enkripsi Data</li>
+        <li><span class="cert-icon">✓</span> Pengembangan Sistem dengan Standar ISO/IEC 27001</li>
+      </ul>
+    </section>
+
     <!-- SOCIALS -->
-    <section class="section fade" data-fade>
-      <h2>Sosial Media</h2>
+    <section class="section fade-in" data-animate>
+      <h2>Ikuti Saya</h2>
       <div class="socials">
-        <a href="https://www.facebook.com/share/1BsavFiyEV/" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" /></a>
-        <a href="https://www.instagram.com/teuku_rijul" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" /></a>
-        <a href="https://www.tiktok.com/@teuku.rijul" target="_blank"><img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" /></a>
+        <a href="https://www.facebook.com/share/1BsavFiyEV/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="" />
+        </a>
+        <a href="https://www.instagram.com/teuku_rijul" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
+          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="" />
+        </a>
+        <a href="https://www.tiktok.com/@teuku.rijul" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
+          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="" />
+        </a>
       </div>
     </section>
 
     <!-- REVIEWS -->
-    <section class="section fade reviews" data-fade>
-      <h2>Ulasan</h2>
-      <div class="meta">Rating rata-rata: <strong>★★★★★</strong> — 3.000+ ulasan</div>
-      <div class="slider">
-        <div class="rev"><strong>Rahmat S.</strong><div style="margin:8px 0;color:#ffb400">★★★★★</div><p>"Pelayanan sangat baik dan profesional. Sangat direkomendasikan!"</p></div>
-        <div class="rev"><strong>Andi P.</strong><div style="margin:8px 0;color:#ffb400">★★★★★</div><p>"Kerja cepat dan rapi, hasil sangat bagus."</p></div>
-        <div class="rev"><strong>Dewi L.</strong><div style="margin:8px 0;color:#ffb400">★★★★★</div><p>"Profesional, bertanggung jawab, dan hasil memuaskan."</p></div>
+    <section class="section fade-in reviews" data-animate>
+      <h2>Ulasan Klien</h2>
+      <div class="reviews-meta">Rating rata-rata: <strong>★★★★★</strong> — Lebih dari 3.000 ulasan positif</div>
+      <div class="reviews-slider">
+        <div class="review-card">
+          <strong>Rahmat S.</strong>
+          <div class="stars">★★★★★</div>
+          <p>"Pelayanan sangat baik dan profesional. Sangat direkomendasikan!"</p>
+        </div>
+        <div class="review-card">
+          <strong>Andi P.</strong>
+          <div class="stars">★★★★★</div>
+          <p>"Kerja cepat dan rapi, hasil sangat bagus."</p>
+        </div>
+        <div class="review-card">
+          <strong>Dewi L.</strong>
+          <div class="stars">★★★★★</div>
+          <p>"Profesional, bertanggung jawab, dan hasil memuaskan."</p>
+        </div>
       </div>
     </section>
 
-    <footer>© 2025 Teuku Rijul — Premium Freelancer. All Rights Reserved.</footer>
-  </main>
+    <footer>© 2026 Teuku Rijul — Freelancer Premium. All Rights Reserved.</footer>
+  </div>
 
-  <!-- WhatsApp Floating -->
-  <a class="wa" href="https://wa.me/62895328323138" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" /></a>
+  <!-- WhatsApp Floating Button -->
+  <a href="https://wa.me/62895328323138" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+  </a>
 
   <script>
-    // Fade animation
-    const io = new IntersectionObserver((entries)=>{
-      entries.forEach(e => {if(e.isIntersecting){e.target.classList.add('in'); io.unobserve(e.target);}});
-    },{threshold:0.2});
-    document.querySelectorAll('[data-fade]').forEach(el => io.observe(el));
+    // Fade-in on scroll
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('appear');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
 
-    // Auto-slider
-    const slider = document.querySelector('.slider');
-    if(slider){
-      let idx=0;
-      const items = slider.children;
-      const total = items.length;
-      setInterval(()=>{
-        idx=(idx+1)%total;
-        slider.scrollTo({left: idx*(items[0].offsetWidth+16), behavior:'smooth'});
-      }, 3000);
+    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+
+    // Auto-scroll reviews (desktop only)
+    const slider = document.querySelector('.reviews-slider');
+    if (slider && window.innerWidth > 768) {
+      let index = 0;
+      const cards = Array.from(slider.children);
+      setInterval(() => {
+        index = (index + 1) % cards.length;
+        const offset = cards.slice(0, index).reduce((sum, card) => sum + card.offsetWidth + 24, 0);
+        slider.scrollTo({ left: offset, behavior: 'smooth' });
+      }, 4500);
     }
   </script>
 </body>
-          </html>
-          
+</html>
