@@ -1,598 +1,1940 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Teuku Rijul — Software Engineer | Full-Stack & Cloud Architecture</title>
-  <meta name="description" content="Software engineer berpengalaman lebih dari 5 tahun dalam pengembangan aplikasi web dan sistem terdistribusi. Spesialis React, Node.js, dan arsitektur cloud." />
-  <meta name="keywords" content="Teuku Rijul, software engineer Indonesia, full-stack developer, cloud architecture, React, Node.js, DevOps, Aceh" />
-  <meta name="author" content="Teuku Rijul" />
-  <link rel="canonical" href="https://teukurijul.github.io" />
-
-  <!-- Open Graph / Social -->
-  <meta property="og:title" content="Teuku Rijul — Software Engineer" />
-  <meta property="og:description" content="Software engineer berpengalaman lebih dari 5 tahun dalam pengembangan aplikasi web dan sistem terdistribusi." />
-  <meta property="og:image" content="https://i.ibb.co.com/N2Dkh1Vj/IMG-20260110-223018.jpg" />
-  <meta property="og:url" content="https://teukurijul.github.io" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="msapplication-tap-highlight" content="no" />
+  
+  <!-- Security Headers -->
+  <meta http-equiv="X-Content-Type-Options" content="nosniff" />
+  <meta http-equiv="X-Frame-Options" content="SAMEORIGIN" />
+  <meta http-equiv="X-XSS-Protection" content="1; mode=block" />
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin" />
+  
+  <!-- SEO & Metadata -->
+  <title>Platform Enterprise Verifikasi | Solusi Profesional Terpercaya</title>
+  <meta name="title" content="Platform Enterprise Verifikasi | Solusi Profesional Terpercaya" />
+  <meta name="description" content="Platform verifikasi enterprise-grade dengan keamanan tingkat perbankan, kepatuhan regulasi Indonesia, dan skalabilitas tinggi." />
+  <meta name="keywords" content="enterprise, verifikasi, keamanan, profesional, compliance, ISO 27001, UU PDP" />
+  <meta name="author" content="PT Enterprise Solutions Indonesia" />
+  <meta name="robots" content="index, follow" />
+  <meta name="theme-color" content="#0d2844" />
+  <meta name="color-scheme" content="light dark" />
+  
+  <!-- Open Graph / Social Media -->
   <meta property="og:type" content="website" />
-
-  <!-- Favicon -->
-  <link rel="icon" href="image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>👨‍💻</text></svg>" />
-
-  <!-- Font: Poppins – clean & professional -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-
+  <meta property="og:url" content="https://github.com/USERNAME/enterprise-website/" />
+  <meta property="og:title" content="Platform Enterprise Verifikasi" />
+  <meta property="og:description" content="Solusi verifikasi profesional dengan standar keamanan enterprise." />
+  <meta property="og:image" content="./assets/images/og-image.jpg" />
+  <meta property="og:locale" content="id_ID" />
+  
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Platform Enterprise Verifikasi" />
+  <meta name="twitter:description" content="Solusi verifikasi profesional dengan standar keamanan enterprise." />
+  
+  <!-- Favicon & Manifest -->
+  <link rel="icon" type="image/svg+xml" href="./assets/images/favicon.svg" />
+  <link rel="apple-touch-icon" href="./assets/images/apple-touch-icon.png" />
+  <link rel="manifest" href="./manifest.json" crossorigin="use-credentials" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Enterprise" />
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+    <!-- Critical CSS Inline -->
   <style>
+    /* ===== DESIGN SYSTEM ===== */
     :root {
-      --bg: #f8fafc;
-      --text: #0f172a;
-      --text-muted: #64748b;
-      --panel: #ffffff;
-      --accent: #1e40af;
-      --accent-dark: #1e3a8a;
-      --border: #e2e8f0;
-      --radius: 18px;
-      --shadow-light: 0 4px 12px rgba(0, 0, 0, 0.04);
-      --shadow-medium: 0 8px 24px rgba(0, 0, 0, 0.06);
-      --shadow-hover: 0 12px 30px rgba(0, 0, 0, 0.1);
+      --color-primary: #0d2844;
+      --color-primary-light: #1a426b;
+      --color-primary-dark: #081a2d;
+      --color-accent: #c9a961;
+      --color-accent-hover: #b4924c;
+      --color-bg: #ffffff;
+      --color-surface: #f8f9fa;
+      --color-surface-hover: #e9ecef;
+      --color-text-primary: #1a1a1a;
+      --color-text-secondary: #4a5568;
+      --color-text-inverse: #ffffff;
+      --color-text-muted: #718096;
+      --color-success: #2e7d32;
+      --color-success-light: #e8f5e9;
+      --color-warning: #ed6c02;
+      --color-warning-light: #fff3e0;
+      --color-error: #c62828;
+      --color-error-light: #ffebee;
+      --color-info: #0288d1;
+      --color-info-light: #e3f2fd;
+      --color-border: #e2e8f0;
+      --color-border-focus: #0d2844;
+      
+      --shadow-sm: 0 1px 2px rgba(0,0,0,0.05);
+      --shadow-md: 0 4px 6px rgba(0,0,0,0.07);
+      --shadow-lg: 0 10px 15px rgba(0,0,0,0.1);
+      --shadow-xl: 0 20px 25px rgba(0,0,0,0.1);
+      --shadow-2xl: 0 25px 50px rgba(0,0,0,0.25);
+      
+      --radius-sm: 0.25rem;
+      --radius-md: 0.5rem;
+      --radius-lg: 0.75rem;
+      --radius-xl: 1rem;
+      --radius-2xl: 1.5rem;
+      --radius-full: 9999px;
+      
+      --space-1: 0.25rem;
+      --space-2: 0.5rem;
+      --space-3: 0.75rem;
+      --space-4: 1rem;
+      --space-5: 1.25rem;
+      --space-6: 1.5rem;
+      --space-8: 2rem;
+      --space-10: 2.5rem;
+      --space-12: 3rem;
+      --space-16: 4rem;      --space-20: 5rem;
+      
+      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --text-xs: 0.75rem;
+      --text-sm: 0.875rem;
+      --text-base: 1rem;
+      --text-lg: 1.125rem;
+      --text-xl: 1.25rem;
+      --text-2xl: 1.5rem;
+      --text-3xl: 1.875rem;
+      --text-4xl: 2.25rem;
+      --text-5xl: 3rem;
+      
+      --font-light: 300;
+      --font-normal: 400;
+      --font-medium: 500;
+      --font-semibold: 600;
+      --font-bold: 700;
+      
+      --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+      --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
+      
+      --z-dropdown: 100;
+      --z-sticky: 200;
+      --z-fixed: 300;
+      --z-modal-backdrop: 400;
+      --z-modal: 500;
+      --z-toast: 800;
     }
-
-    * {
+    
+    /* Dark Mode */
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --color-bg: #0f172a;
+        --color-surface: #1e293b;
+        --color-surface-hover: #334155;
+        --color-text-primary: #f1f5f9;
+        --color-text-secondary: #94a3b8;
+        --color-text-muted: #64748b;
+        --color-border: #334155;
+        --color-border-focus: #60a5fa;
+      }
+    }
+    
+    /* ===== RESET ===== */
+    *, *::before, *::after {
       box-sizing: border-box;
       margin: 0;
-      padding: 0;
+      padding: 0;    }
+    
+    html {
+      scroll-behavior: smooth;
+      -webkit-text-size-adjust: 100%;
+      -webkit-tap-highlight-color: transparent;
     }
-
+    
     body {
-      background-color: var(--bg);
-      color: var(--text);
-      font-family: "Poppins", system-ui, -apple-system, sans-serif;
-      line-height: 1.65;
-      -webkit-font-smoothing: antialiased;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 24px;
-    }
-
-    /* GLOBAL TYPOGRAPHY */
-    h1, h2, h3, h4 {
-      font-weight: 700;
-      line-height: 1.2;
-    }
-    h1 { font-size: 48px; }
-    h2 { font-size: 34px; margin-bottom: 24px; }
-    h3 { font-size: 24px; margin-bottom: 16px; }
-    h4 { font-size: 20px; margin-bottom: 12px; }
-    p {
-      margin-bottom: 16px;
-      color: var(--text-muted);
-    }
-
-    /* HERO */
-    .hero {
-      padding: 100px 24px 90px;
-      text-align: center;
-      background: linear-gradient(135deg, #ffffff 0%, #f1f5f9 100%);
-      border-radius: var(--radius);
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-medium);
-      margin: 40px 0 60px;
-    }
-    .hero h1 {
-      margin: 0 0 16px;
-      background: linear-gradient(90deg, var(--accent), #3b82f6);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      letter-spacing: -0.5px;
-    }
-    .hero-subtitle {
-      font-size: 22px;
-      font-weight: 500;
-      color: var(--accent);
-      margin-bottom: 16px;
-    }
-    .hero p {
-      font-size: 19px;
-      max-width: 680px;
-      margin: 0 auto 28px;
-      color: var(--text);
-    }
-    .cta {
-      display: inline-block;
-      padding: 15px 40px;
-      background: linear-gradient(90deg, var(--accent), #2563eb);
-      color: white;
-      text-decoration: none;
-      font-weight: 600;
-      font-size: 18px;
-      border-radius: 16px;
-      box-shadow: 0 8px 20px rgba(30, 64, 175, 0.25);
-      transition: all 0.3s ease;
-    }
-    .cta:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 28px rgba(30, 64, 175, 0.35);
-    }
-
-    /* SECTION */
-    .section {
-      background: var(--panel);
-      border-radius: var(--radius);
-      padding: 52px;
-      margin-bottom: 52px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-light);
-    }
-
-    /* ABOUT */
-    .about-grid {
+      font-family: var(--font-sans);
+      font-size: var(--text-base);
+      line-height: 1.6;
+      color: var(--color-text-primary);
+      background-color: var(--color-bg);
+      overflow-x: hidden;
+      min-height: 100vh;
       display: flex;
-      gap: 48px;
+      flex-direction: column;
+    }
+    
+    /* ===== ACCESSIBILITY ===== */
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+    
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: var(--space-4);
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      padding: var(--space-3) var(--space-6);
+      z-index: var(--z-toast);
+      border-radius: var(--radius-md);
+      font-weight: var(--font-medium);
+      transition: top var(--transition-fast);
+      text-decoration: none;
+    }
+    
+    .skip-link:focus {
+      top: var(--space-4);
+      outline: 2px solid var(--color-accent);      outline-offset: 2px;
+    }
+    
+    :focus-visible {
+      outline: 2px solid var(--color-primary);
+      outline-offset: 2px;
+    }
+    
+    :focus:not(:focus-visible) {
+      outline: none;
+    }
+    
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+      }
+    }
+    
+    /* ===== TYPOGRAPHY ===== */
+    h1, h2, h3, h4, h5, h6 {
+      font-weight: var(--font-semibold);
+      line-height: 1.3;
+      margin-bottom: var(--space-4);
+      color: var(--color-text-primary);
+    }
+    
+    h1 {
+      font-size: clamp(var(--text-3xl), 5vw, var(--text-5xl));
+      font-weight: var(--font-bold);
+      letter-spacing: -0.02em;
+    }
+    
+    h2 {
+      font-size: var(--text-3xl);
+      position: relative;
+      padding-bottom: var(--space-4);
+    }
+    
+    h2::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 80px;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+      border-radius: var(--radius-full);
+    }    
+    h3 { font-size: var(--text-xl); }
+    h4 { font-size: var(--text-lg); }
+    
+    p {
+      margin-bottom: var(--space-4);
+      color: var(--color-text-secondary);
+    }
+    
+    a {
+      color: var(--color-primary);
+      text-decoration: none;
+      transition: color var(--transition-fast);
+    }
+    
+    a:hover {
+      color: var(--color-primary-light);
+      text-decoration: underline;
+    }
+    
+    /* ===== UTILITIES ===== */
+    .container {
+      width: 100%;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 var(--space-4);
+    }
+    
+    @media (min-width: 1280px) {
+      .container { padding: 0 var(--space-8); }
+    }
+    
+    /* ===== BUTTONS ===== */
+    .btn {
+      display: inline-flex;
       align-items: center;
+      justify-content: center;
+      gap: var(--space-2);
+      padding: var(--space-3) var(--space-6);
+      font-family: var(--font-sans);
+      font-weight: var(--font-medium);
+      font-size: var(--text-sm);
+      line-height: 1.5;
+      border-radius: var(--radius-md);
+      border: 2px solid transparent;
+      cursor: pointer;
+      transition: all var(--transition-normal);
+      text-align: center;
+      white-space: nowrap;
+      user-select: none;      text-decoration: none;
+    }
+    
+    .btn-primary {
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn-primary:hover {
+      background: var(--color-primary-light);
+      border-color: var(--color-primary-light);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      text-decoration: none;
+    }
+    
+    .btn-primary:active {
+      transform: translateY(0);
+      box-shadow: var(--shadow-sm);
+    }
+    
+    .btn-accent {
+      background: var(--color-accent);
+      color: var(--color-primary);
+      border-color: var(--color-accent);
+      font-weight: var(--font-semibold);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .btn-accent:hover {
+      background: var(--color-accent-hover);
+      border-color: var(--color-accent-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-lg);
+      text-decoration: none;
+    }
+    
+    .btn-outline {
+      background: transparent;
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+    
+    .btn-outline:hover {
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      text-decoration: none;
+    }    
+    .btn-ghost {
+      background: transparent;
+      border-color: transparent;
+      color: var(--color-text-secondary);
+    }
+    
+    .btn-ghost:hover {
+      background: var(--color-surface);
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    
+    .btn:disabled,
+    .btn[aria-disabled="true"] {
+      opacity: 0.6;
+      cursor: not-allowed;
+      transform: none !important;
+      pointer-events: none;
+    }
+    
+    .btn-loading {
+      pointer-events: none;
+      opacity: 0.8;
+    }
+    
+    .btn-loading::after {
+      content: '';
+      width: 16px;
+      height: 16px;
+      border: 2px solid currentColor;
+      border-right-color: transparent;
+      border-radius: 50%;
+      animation: spin 0.75s linear infinite;
+      margin-left: var(--space-2);
+    }
+    
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+    
+    /* ===== HEADER ===== */
+    .header {
+      position: sticky;
+      top: 0;
+      z-index: var(--z-sticky);
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(16px) saturate(180%);
+      -webkit-backdrop-filter: blur(16px) saturate(180%);
+      border-bottom: 1px solid var(--color-border);      transition: all var(--transition-normal);
+    }
+    
+    @media (prefers-color-scheme: dark) {
+      .header {
+        background: rgba(15, 23, 42, 0.9);
+      }
+    }
+    
+    .header.scrolled {
+      box-shadow: var(--shadow-md);
+      padding: var(--space-2) 0;
+    }
+    
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: var(--space-4) 0;
+      transition: padding var(--transition-normal);
+    }
+    
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-weight: var(--font-bold);
+      font-size: var(--text-xl);
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    
+    .logo:hover {
+      text-decoration: none;
+    }
+    
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--color-text-inverse);
+      font-size: var(--text-lg);
+      flex-shrink: 0;
+    }
+    
+    .nav {      display: flex;
+      align-items: center;
+      gap: var(--space-8);
+    }
+    
+    .nav-link {
+      font-weight: var(--font-medium);
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      position: relative;
+      padding: var(--space-2) 0;
+      text-decoration: none;
+    }
+    
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--color-accent);
+      transition: width var(--transition-normal);
+    }
+    
+    .nav-link:hover,
+    .nav-link.active {
+      color: var(--color-primary);
+      text-decoration: none;
+    }
+    
+    .nav-link:hover::after,
+    .nav-link.active::after {
+      width: 100%;
+    }
+    
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+    }
+    
+    .btn-mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: var(--text-2xl);
+      color: var(--color-primary);
+      cursor: pointer;
+      padding: var(--space-2);      line-height: 1;
+    }
+    
+    /* ===== HERO ===== */
+    .hero {
+      padding: var(--space-20) 0;
+      background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%);
+      color: var(--color-text-inverse);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -20%;
+      width: 600px;
+      height: 600px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201,169,97,0.2) 0%, transparent 70%);
+      animation: float 20s ease-in-out infinite;
+      z-index: 0;
+    }
+    
+    @keyframes float {
+      0%, 100% { transform: translateY(0) rotate(0deg); }
+      50% { transform: translateY(-30px) rotate(5deg); }
+    }
+    
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 700px;
+    }
+    
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-2);
+      padding: var(--space-2) var(--space-4);
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      border-radius: var(--radius-full);
+      font-size: var(--text-sm);
+      margin-bottom: var(--space-6);
+      backdrop-filter: blur(8px);
+    }
+    
+    .hero p {      color: rgba(255,255,255,0.9);
+      font-size: var(--text-lg);
+      margin-bottom: var(--space-8);
+      max-width: 600px;
+    }
+    
+    .hero-cta {
+      display: flex;
+      gap: var(--space-4);
       flex-wrap: wrap;
     }
-    .profile-img {
-      width: 240px;
-      height: 240px;
-      border-radius: var(--radius);
-      object-fit: cover;
-      border: 3px solid var(--accent);
-      box-shadow: var(--shadow-medium);
+    
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: var(--space-6);
+      margin-top: var(--space-16);
+      padding-top: var(--space-8);
+      border-top: 1px solid rgba(255,255,255,0.2);
     }
-    .philosophy {
-      background: #f1f5f9;
-      padding: 24px;
-      border-radius: 12px;
-      border-left: 4px solid var(--accent);
+    
+    .stat-item {
+      text-align: center;
     }
-
-    /* EDUCATION & EXPERIENCE */
-    .timeline-item {
-      margin-bottom: 32px;
-      padding-bottom: 32px;
-      border-bottom: 1px solid var(--border);
+    
+    .stat-value {
+      display: block;
+      font-size: var(--text-3xl);
+      font-weight: var(--font-bold);
+      color: var(--color-accent);
+      margin-bottom: var(--space-1);
     }
-    .timeline-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+    
+    .stat-label {
+      font-size: var(--text-sm);
+      opacity: 0.9;
+      color: rgba(255,255,255,0.8);
     }
-    .timeline-date {
-      color: var(--accent);
-      font-weight: 600;
-      margin-bottom: 4px;
+    
+    /* ===== SECTIONS ===== */
+    .section {
+      padding: var(--space-20) 0;
     }
-    .timeline-title {
-      font-size: 20px;
-      margin-bottom: 8px;
+    
+    .section-alt {
+      background: var(--color-surface);
     }
-    .timeline-org {
-      font-weight: 600;
-      color: var(--text);
+    
+    .section-header {
+      text-align: center;      max-width: 700px;
+      margin: 0 auto var(--space-16);
     }
-
-    /* PROJECTS */
-    .projects-grid {
+    
+    .section-header h2::after {
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    /* ===== FEATURES ===== */
+    .features-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 28px;
+      gap: var(--space-6);
     }
-    .project-card {
-      background: white;
-      border-radius: 16px;
-      padding: 28px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-light);
-      transition: all 0.3s ease;
+    
+    .feature-card {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-xl);
+      padding: var(--space-6);
+      transition: all var(--transition-normal);
+      position: relative;
+      overflow: hidden;
     }
-    .project-card:hover {
-      transform: translateY(-6px);
-      box-shadow: var(--shadow-hover);
+    
+    .feature-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--color-primary), var(--color-accent));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: transform var(--transition-normal);
     }
-    .tech-tags {
+    
+    .feature-card:hover {
+      transform: translateY(-8px);
+      box-shadow: var(--shadow-xl);
+      border-color: var(--color-primary);
+    }
+    
+    .feature-card:hover::before {
+      transform: scaleX(1);
+    }
+    
+    .feature-icon {      width: 64px;
+      height: 64px;
+      background: linear-gradient(135deg, var(--color-primary), var(--color-primary-light));
+      border-radius: var(--radius-lg);
       display: flex;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-top: 16px;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: var(--space-5);
+      color: var(--color-text-inverse);
+      font-size: var(--text-3xl);
     }
-    .tech-tag {
-      background: #dbeafe;
-      color: var(--accent);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
+    
+    /* ===== TIMELINE ===== */
+    .timeline {
+      position: relative;
+      max-width: 800px;
+      margin: 0 auto;
+      padding-left: var(--space-10);
     }
-
-    /* SKILLS */
-    .skills-grid {
+    
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 7px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: var(--color-border);
+    }
+    
+    .timeline-item {
+      position: relative;
+      padding-bottom: var(--space-10);
+      padding-left: var(--space-6);
+    }
+    
+    .timeline-item:last-child {
+      padding-bottom: 0;
+    }
+    
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -37px;
+      top: 0;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--color-primary);
+      border: 4px solid var(--color-bg);
+      box-shadow: 0 0 0 2px var(--color-border);
+      transition: all var(--transition-normal);
+    }
+    
+    .timeline-item.completed::before {
+      background: var(--color-success);
+    }
+    
+    .timeline-item.active::before {
+      background: var(--color-accent);
+      box-shadow: 0 0 0 4px rgba(201,169,97,0.3);
+      animation: pulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes pulse {
+      0%, 100% { box-shadow: 0 0 0 4px rgba(201,169,97,0.3); }
+      50% { box-shadow: 0 0 0 8px rgba(201,169,97,0.1); }
+    }
+    
+    .timeline-content {
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-5);
+      transition: all var(--transition-fast);
+    }
+    
+    .timeline-item:hover .timeline-content {
+      border-color: var(--color-primary);
+      box-shadow: var(--shadow-md);
+    }
+    
+    .timeline-step {
+      display: inline-block;
+      padding: var(--space-1) var(--space-3);
+      background: var(--color-primary);
+      color: var(--color-text-inverse);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: var(--font-semibold);
+      margin-bottom: var(--space-2);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    
+    /* ===== CTA ===== */
+    .cta-section {
+      background: linear-gradient(135deg, var(--color-primary-dark), var(--color-primary));
+      color: var(--color-text-inverse);
+      text-align: center;
+      padding: var(--space-16) 0;
+    }
+    
+    .cta-section h2 {
+      color: var(--color-text-inverse);
+    }
+    
+    .cta-section h2::after {
+      background: var(--color-accent);
+      left: 50%;
+      transform: translateX(-50%);
+    }
+    
+    .cta-section p {
+      color: rgba(255,255,255,0.9);
+      max-width: 600px;
+      margin: var(--space-4) auto var(--space-8);
+      font-size: var(--text-lg);
+    }
+    
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--color-primary-dark);
+      color: rgba(255,255,255,0.8);
+      padding: var(--space-16) 0 var(--space-8);
+      margin-top: auto;
+    }
+    
+    .footer-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 24px;
+      gap: var(--space-10);
+      margin-bottom: var(--space-12);
     }
-    .skill-category h4 {
-      color: var(--accent);
-      margin-bottom: 16px;
+    
+    .footer-brand {
+      max-width: 320px;
     }
-    .skill-list {
-      list-style: none;
+    
+    .footer-brand .logo {
+      color: var(--color-text-inverse);
+      margin-bottom: var(--space-4);
     }
-    .skill-list li {
-      padding: 8px 0;
+    
+    .footer-brand p {
+      color: rgba(255,255,255,0.7);
+      font-size: var(--text-sm);
+      line-height: 1.7;
+    }
+    
+    .footer-links h4 {
+      color: var(--color-text-inverse);
+      font-size: var(--text-base);
+      margin-bottom: var(--space-5);
+      font-weight: var(--font-semibold);
+    }
+    
+    .footer-links a {
+      display: block;
+      color: rgba(255,255,255,0.7);
+      font-size: var(--text-sm);
+      padding: var(--space-2) 0;
+      transition: color var(--transition-fast), padding-left var(--transition-fast);
+    }
+    
+    .footer-links a:hover {
+      color: var(--color-accent);
+      padding-left: var(--space-2);
+      text-decoration: none;
+    }
+    
+    .footer-bottom {
+      padding-top: var(--space-8);
+      border-top: 1px solid rgba(255,255,255,0.1);
       display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
       align-items: center;
+      gap: var(--space-4);
+      font-size: var(--text-sm);
+      color: rgba(255,255,255,0.6);
     }
-    .skill-list li::before {
-      content: "•";
-      color: var(--accent);
-      font-weight: bold;
-      display: inline-block;
-      width: 1em;
-      margin-right: 8px;
-    }
-
-    /* CERTIFICATIONS */
-    .certifications-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 24px;
-    }
-    .cert-card {
-      background: white;
-      border-radius: 16px;
-      padding: 24px;
-      border: 1px solid var(--border);
-      box-shadow: var(--shadow-light);
-    }
-    .cert-provider {
-      color: var(--accent);
-      font-weight: 600;
-      margin-top: 8px;
-    }
-    .cert-year {
-      background: #dbeafe;
-      color: var(--accent);
-      padding: 2px 12px;
-      border-radius: 20px;
-      font-size: 12px;
-      font-weight: 600;
-      display: inline-block;
-      margin-top: 8px;
-    }
-
-    /* CONTACT */
-    .contact-info {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 24px;
-      margin-top: 24px;
-    }
-    .contact-item {
+    
+    .footer-badges {
       display: flex;
+      gap: var(--space-3);
+      flex-wrap: wrap;
+    }
+    
+    .badge {
+      display: inline-flex;
       align-items: center;
-      gap: 12px;
+      gap: var(--space-1);
+      padding: var(--space-2) var(--space-3);
+      background: rgba(255,255,255,0.1);
+      border-radius: var(--radius-full);
+      font-size: var(--text-xs);
+      font-weight: var(--font-medium);
     }
-    .contact-icon {
-      width: 48px;
-      height: 48px;
-      background: #dbeafe;
-      border-radius: 12px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      color: var(--accent);
-      font-weight: bold;
-      font-size: 20px;
-    }
-
-    /* SOCIALS */
-    .socials {
-      display: flex;
-      justify-content: center;
-      gap: 22px;
-      margin-top: 20px;
-    }
-    .social-icon {
-      width: 56px;
-      height: 56px;
-      border-radius: 16px;
-      background: white;
-      display: grid;
-      place-items: center;
-      box-shadow: var(--shadow-light);
-      transition: transform 0.25s ease;
-    }
-    .social-icon:hover {
-      transform: translateY(-4px);
-    }
-    .social-icon img {
-      width: 30px;
-      height: 30px;
-    }
-
-    /* WHATSAPP BUTTON */
-    .whatsapp-float {
+    
+    /* ===== MODAL ===== */
+    .modal-overlay {
       position: fixed;
-      bottom: 28px;
-      right: 28px;
-      width: 66px;
-      height: 66px;
-      border-radius: 50%;
-      background: #25D366;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(0,0,0,0.7);
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.45);
-      z-index: 1000;
-      transition: transform 0.25s ease;
-    }
-    .whatsapp-float:hover {
-      transform: scale(1.1);
-    }
-    .whatsapp-float img {
-      width: 34px;
-      height: 34px;
-      filter: brightness(0) invert(1);
-    }
-
-    /* ANIMATIONS */
-    .fade-in {
+      z-index: var(--z-modal-backdrop);
       opacity: 0;
-      transform: translateY(20px);
+      visibility: hidden;
+      transition: all var(--transition-normal);
+      padding: var(--space-4);
+      backdrop-filter: blur(4px);
+    }
+    
+    .modal-overlay.active {
+      opacity: 1;
+      visibility: visible;
+    }
+    
+    .modal {
+      background: var(--color-bg);
+      border-radius: var(--radius-2xl);
+      width: 100%;
+      max-width: 520px;
+      max-height: 90vh;
+      overflow-y: auto;
+      box-shadow: var(--shadow-2xl);
+      transform: translateY(20px) scale(0.95);
+      transition: transform var(--transition-normal);
+      border: 1px solid var(--color-border);
+    }
+    
+    .modal-overlay.active .modal {
+      transform: translateY(0) scale(1);
+    }
+    
+    .modal-header {
+      padding: var(--space-6);
+      border-bottom: 1px solid var(--color-border);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      background: var(--color-bg);
+      z-index: 1;
+    }
+    
+    .modal-close {
+      background: none;
+      border: none;
+      font-size: var(--text-3xl);
+      color: var(--color-text-secondary);
+      cursor: pointer;
+      padding: var(--space-1);
+      line-height: 1;
+      transition: color var(--transition-fast), transform var(--transition-fast);
+      border-radius: var(--radius-md);
+    }
+    
+    .modal-close:hover {
+      color: var(--color-error);
+      transform: scale(1.1);
+      background: var(--color-error-light);
+    }
+    
+    .modal-body {
+      padding: var(--space-6);
+    }
+    
+    .modal-footer {
+      padding: var(--space-4) var(--space-6);
+      border-top: 1px solid var(--color-border);
+      display: flex;
+      gap: var(--space-3);
+      justify-content: flex-end;
+      background: var(--color-surface);
+      position: sticky;
+      bottom: 0;
+    }
+    
+    /* ===== FORM ===== */
+    .form-group {
+      margin-bottom: var(--space-5);
+    }
+    
+    .form-label {
+      display: block;
+      font-weight: var(--font-medium);
+      margin-bottom: var(--space-2);
+      color: var(--color-text-primary);
+      font-size: var(--text-sm);
+    }
+    
+    .form-input {
+      width: 100%;
+      padding: var(--space-3) var(--space-4);
+      border: 2px solid var(--color-border);
+      border-radius: var(--radius-md);
+      font-size: var(--text-base);
+      font-family: var(--font-sans);
+      background: var(--color-bg);
+      color: var(--color-text-primary);
+      transition: all var(--transition-fast);
+    }
+    
+    .form-input:hover {
+      border-color: var(--color-text-muted);
+    }
+    
+    .form-input:focus {
+      outline: none;
+      border-color: var(--color-border-focus);
+      box-shadow: 0 0 0 3px rgba(13,40,68,0.15);
+    }
+    
+    .form-input.error {
+      border-color: var(--color-error);
+      background-color: var(--color-error-light);
+    }
+    
+    .form-input.error:focus {
+      box-shadow: 0 0 0 3px rgba(198,40,40,0.15);
+    }
+    
+    .form-error {
+      color: var(--color-error);
+      font-size: var(--text-sm);
+      margin-top: var(--space-1);
+      display: none;
+      font-weight: var(--font-medium);
+    }
+    
+    .form-input.error + .form-error {
+      display: block;
+      animation: shake 0.5s ease-in-out;
+    }
+    
+    @keyframes shake {
+      0%, 100% { transform: translateX(0); }
+      25% { transform: translateX(-5px); }
+      75% { transform: translateX(5px); }
+    }
+    
+    .form-hint {
+      color: var(--color-text-muted);
+      font-size: var(--text-xs);
+      margin-top: var(--space-1);
+    }
+    
+    /* ===== TOAST ===== */
+    .toast-container {
+      position: fixed;
+      top: var(--space-4);
+      right: var(--space-4);
+      z-index: var(--z-toast);
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-3);
+      max-width: 400px;
+      pointer-events: none;
+    }
+    
+    .toast {
+      background: var(--color-bg);
+      border-left: 4px solid var(--color-primary);
+      border-radius: var(--radius-lg);
+      padding: var(--space-4);
+      box-shadow: var(--shadow-xl);
+      display: flex;
+      gap: var(--space-3);
+      align-items: flex-start;
+      pointer-events: auto;
+      transform: translateX(120%);
+      opacity: 0;
+      transition: all var(--transition-normal);
+      border: 1px solid var(--color-border);
+    }
+    
+    .toast.show {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    
+    .toast.success { border-left-color: var(--color-success); }
+    .toast.warning { border-left-color: var(--color-warning); }
+    .toast.error { border-left-color: var(--color-error); }
+    .toast.info { border-left-color: var(--color-info); }
+    
+    .toast-icon {
+      font-size: var(--text-xl);
+      flex-shrink: 0;
+      line-height: 1;
+    }
+    
+    .toast-content h4 {
+      font-size: var(--text-base);
+      margin-bottom: var(--space-1);
+      font-weight: var(--font-semibold);
+    }
+    
+    .toast-content p {
+      font-size: var(--text-sm);
+      margin-bottom: 0;
+      color: var(--color-text-secondary);
+    }
+    
+    .toast-close {
+      background: none;
+      border: none;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      padding: var(--space-1);
+      font-size: var(--text-lg);
+      line-height: 1;
+      margin-left: auto;
+    }
+    
+    .toast-close:hover {
+      color: var(--color-text-primary);
+    }
+    
+    /* ===== COOKIE BANNER ===== */
+    .cookie-banner {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--color-surface);
+      border-top: 1px solid var(--color-border);
+      padding: var(--space-4);
+      z-index: var(--z-sticky);
+      display: none;
+      box-shadow: 0 -4px 20px rgba(0,0,0,0.1);
+    }
+    
+    .cookie-banner.show {
+      display: block;
+      animation: slideUp var(--transition-normal);
+    }
+    
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+    
+    .cookie-content {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: var(--space-4);
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    
+    .cookie-text {
+      flex: 1;
+      min-width: 280px;
+      font-size: var(--text-sm);
+      color: var(--color-text-secondary);
+      line-height: 1.6;
+    }
+    
+    .cookie-text a {
+      color: var(--color-primary);
+      text-decoration: underline;
+    }
+    
+    .cookie-actions {
+      display: flex;
+      gap: var(--space-3);
+      flex-shrink: 0;
+    }
+    
+    /* ===== ANIMATIONS ===== */
+    [data-aos] {
+      opacity: 0;
+      transform: translateY(30px);
       transition: opacity 0.6s ease, transform 0.6s ease;
     }
-    .fade-in.appear {
+    
+    [data-aos].aos-animate {
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* RESPONSIVE */
-    @media (max-width: 900px) {
-      .section { padding: 40px 24px; }
-      h1 { font-size: 38px; }
-      h2 { font-size: 28px; }
-      h3 { font-size: 22px; }
+    
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .hero { padding: var(--space-16) 0; }
+      .hero-stats { grid-template-columns: repeat(2, 1fr); }
+      .section { padding: var(--space-16) 0; }
     }
-
-    @media (max-width: 600px) {
-      .hero { padding: 70px 16px 60px; }
-      h1 { font-size: 30px; }
-      .hero p { font-size: 17px; }
-      .hero-subtitle { font-size: 18px; }
-      .about-grid { gap: 32px; }
-      .profile-img { width: 190px; height: 190px; }
-      .section { padding: 32px 16px; }
+    
+    @media (max-width: 768px) {
+      .btn-mobile-toggle { display: block; }
+      
+      .nav {
+        position: fixed;
+        top: 72px;
+        left: 0;
+        right: 0;
+        background: var(--color-bg);
+        flex-direction: column;
+        padding: var(--space-6);
+        gap: var(--space-4);
+        border-bottom: 1px solid var(--color-border);
+        box-shadow: var(--shadow-lg);
+        transform: translateY(-100%);
+        opacity: 0;
+        visibility: hidden;
+        transition: all var(--transition-normal);
+      }
+      
+      .nav.active {
+        transform: translateY(0);
+        opacity: 1;
+        visibility: visible;
+      }
+      
+      .nav-actions {
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      
+      .hero-cta { flex-direction: column; align-items: center; }
+      .hero-cta .btn { width: 100%; max-width: 300px; }
+      .hero-stats { grid-template-columns: 1fr; }
+      
+      .timeline { padding-left: var(--space-8); }
+      .timeline::before { left: 11px; }
+      .timeline-item::before { left: -33px; }
+      
+      .footer-bottom { flex-direction: column; text-align: center; }
+      .cookie-content { flex-direction: column; text-align: center; }
+      .cookie-actions { width: 100%; justify-content: center; }
+      
+      .toast-container {
+        left: var(--space-4);
+        right: var(--space-4);
+        max-width: none;
+      }
+    }
+    
+    @media (max-width: 480px) {
+      :root {
+        --space-20: 4rem;
+        --space-16: 3rem;
+      }
+      
+      .container { padding: 0 var(--space-3); }
+      .hero { padding: var(--space-12) 0; }
+      .section { padding: var(--space-12) 0; }
+      
+      .btn { width: 100%; justify-content: center; }
+      .hero-cta .btn { width: 100%; }
+      
+      .modal {
+        margin: var(--space-4);
+        max-height: calc(100vh - var(--space-8));
+      }
+      
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* ===== PRINT ===== */
+    @media print {
+      .header, .footer, .cookie-banner, .btn, .modal-overlay, .toast-container {
+        display: none !important;
+      }
+      body {
+        background: white;
+        color: black;
+      }
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <!-- HERO -->
-    <section class="hero fade-in" data-animate>
-      <h1>Teuku Rijul</h1>
-      <div class="hero-subtitle">Software Engineer • Full-Stack Developer • Cloud Architect</div>
-      <p>Software engineer yang bersemangat dengan pengalaman lebih dari 5 tahun dalam pengembangan aplikasi web dan sistem terdistribusi. Mengkhususkan diri dalam React, Node.js, dan arsitektur cloud.</p>
-      <a class="cta" href="https://wa.me/62895328323138" target="_blank" rel="noopener">Hubungi via WhatsApp</a>
+  <!-- Skip Link -->
+  <a href="#main-content" class="skip-link">Lewati ke konten utama</a>
+  
+  <!-- Header -->
+  <header class="header" role="banner">
+    <div class="container header-inner">
+      <a href="./" class="logo" aria-label="Beranda">
+        <div class="logo-icon" aria-hidden="true">🏛️</div>
+        <span>Enterprise</span>
+      </a>
+      
+      <button class="btn-mobile-toggle" aria-label="Toggle navigasi" aria-expanded="false" aria-controls="main-nav">
+        <span aria-hidden="true">☰</span>
+      </button>
+      
+      <nav id="main-nav" class="nav" role="navigation" aria-label="Navigasi utama">
+        <a href="#fitur" class="nav-link">Fitur</a>
+        <a href="#proses" class="nav-link">Proses</a>
+        <a href="#keamanan" class="nav-link">Keamanan</a>
+        <a href="#faq" class="nav-link">FAQ</a>
+        <a href="#kontak" class="nav-link">Kontak</a>
+        
+        <div class="nav-actions">
+          <button class="btn btn-ghost" onclick="openModal('login')">Masuk</button>
+          <button class="btn btn-primary" onclick="openModal('register')">Daftar</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+  
+  <!-- Main Content -->
+  <main id="main-content" role="main">
+    <!-- Hero Section -->
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="container">
+        <div class="hero-content" data-aos="fade-up">
+          <div class="hero-badge">
+            <span aria-hidden="true">✓</span>
+            <span>ISO 27001 Certified • PCI-DSS Compliant</span>
+          </div>
+          
+          <h1 id="hero-title">Platform Enterprise Verifikasi dengan Standar Perbankan</h1>
+          
+          <p>Solusi terintegrasi dengan keamanan tingkat enterprise, transparansi penuh, dan kepatuhan regulasi Indonesia (UU PDP, UU ITE, POJK). Dipercaya oleh 500+ organisasi.</p>
+          
+          <div class="hero-cta">
+            <button class="btn btn-accent" onclick="openModal('register')">
+              Mulai Sekarang
+              <span aria-hidden="true">→</span>
+            </button>
+            <button class="btn btn-outline" style="border-color: rgba(255,255,255,0.5); color: white;" onclick="scrollToSection('proses')">
+              Pelajari Proses
+            </button>
+          </div>
+          
+          <div class="hero-stats">
+            <div class="stat-item">
+              <span class="stat-value">99.99%</span>
+              <span class="stat-label">SLA Uptime</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">24/7</span>
+              <span class="stat-label">Priority Support</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-value">500+</span>
+              <span class="stat-label">Enterprise Clients</span>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
-
-    <!-- ABOUT -->
-    <section class="section fade-in" data-animate>
-      <h2>Tentang Saya</h2>
-      <div class="about-grid">
-        <img class="profile-img" src="https://i.ibb.co.com/N2Dkh1Vj/IMG-20260110-223018.jpg" alt="Foto Profil Teuku Rijul – Software Engineer" loading="lazy" />
+    
+    <!-- Features Section -->
+    <section id="fitur" class="section" aria-labelledby="features-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 id="features-title">Fitur Enterprise-Grade</h2>
+          <p>Dirancang dengan standar tertinggi untuk organisasi yang mengutamakan keamanan, skalabilitas, dan kepatuhan regulasi.</p>
+        </div>
+        
+        <div class="features-grid">
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="feature-icon" aria-hidden="true">🔐</div>
+            <h3>Keamanan Militer</h3>
+            <p>Enkripsi AES-256 end-to-end, autentikasi multi-faktor, dan audit log immutable sesuai ISO 27001 & UU PDP.</p>
+          </article>
+          
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="feature-icon" aria-hidden="true">⚡</div>
+            <h3>Real-Time Processing</h3>
+            <p>WebSocket untuk notifikasi instan, dashboard live tracking, dan estimasi waktu transparan di setiap tahapan.</p>
+          </article>
+          
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <div class="feature-icon" aria-hidden="true">📋</div>
+            <h3>Dokumen Digital</h3>
+            <p>Upload terenkripsi dengan validasi OCR otomatis, preview real-time, dan penyimpanan cloud redundant.</p>
+          </article>
+          
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="400">
+            <div class="feature-icon" aria-hidden="true">🤝</div>
+            <h3>Dedicated Support</h3>
+            <p>Account Manager khusus, SLA response <15 menit, dan tim support bersertifikat tersedia 24/7.</p>
+          </article>
+          
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="500">
+            <div class="feature-icon" aria-hidden="true">🌐</div>
+            <h3>Compliance Ready</h3>
+            <p>Sesuai UU ITE, UU PDP, POJK, dan standar internasional. Laporan audit tersedia on-demand.</p>
+          </article>
+          
+          <article class="feature-card" data-aos="fade-up" data-aos-delay="600">
+            <div class="feature-icon" aria-hidden="true">📱</div>
+            <h3>Multi-Platform</h3>
+            <p>Progressive Web App (PWA), API RESTful untuk integrasi, SDK mobile, dan dashboard responsive.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Process Timeline -->
+    <section id="proses" class="section section-alt" aria-labelledby="process-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 id="process-title">Alur Verifikasi Terstruktur</h2>
+          <p>Proses yang transparan dan dapat dilacak secara real-time untuk memastikan akurasi dan keamanan.</p>
+        </div>
+        
+        <div class="timeline" data-aos="fade-up">
+          <div class="timeline-item completed">
+            <div class="timeline-content">
+              <span class="timeline-step">Langkah 1</span>
+              <h3>Pendaftaran & KYC</h3>
+              <p>Registrasi dengan verifikasi identitas (e-KYC) menggunakan dokumen resmi. Proses otomatis dengan validasi biometrik.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item completed">
+            <div class="timeline-content">
+              <span class="timeline-step">Langkah 2</span>
+              <h3>Pengajuan Dokumen</h3>
+              <p>Upload dokumen melalui sistem drag-and-drop dengan enkripsi client-side. Validasi format otomatis.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item active">
+            <div class="timeline-content">
+              <span class="timeline-step">Langkah 3</span>
+              <h3>Review & Validasi</h3>
+              <p>Tim compliance memverifikasi dengan standar 4-eyes principle. Pantau progres real-time melalui dashboard.</p>
+            </div>
+          </div>
+          
+          <div class="timeline-item">
+            <div class="timeline-content">
+              <span class="timeline-step">Langkah 4</span>
+              <h3>Approval & Settlement</h3>
+              <p>Setelah disetujui, proses settlement ke rekening terdaftar dengan notifikasi konfirmasi dan bukti transaksi.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- Security Section -->
+    <section id="keamanan" class="section" aria-labelledby="security-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 id="security-title">Sertifikasi & Kepatuhan</h2>
+          <p>Komitmen kami untuk melindungi data dan transaksi Anda dengan sertifikasi internasional dan kepatuhan regulasi.</p>
+        </div>
+        
+        <div class="features-grid">
+          <div class="feature-card" data-aos="fade-up">
+            <h3>🔐 ISO 27001:2022</h3>
+            <p>Sistem Manajemen Keamanan Informasi tersertifikasi dengan audit tahunan oleh badan akreditasi internasional.</p>
+          </div>
+          
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <h3>💳 PCI-DSS Level 1</h3>
+            <p>Standar keamanan tertinggi untuk pemrosesan data kartu pembayaran, diaudit quarterly oleh QSA certified.</p>
+          </div>
+          
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <h3>🇮🇩 UU PDP Compliant</h3>
+            <p>Kepatuhan penuh terhadap Undang-Undang Pelindungan Data Pribadi Indonesia dengan DPO dedicated.</p>
+          </div>
+          
+          <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <h3>♿ WCAG 2.1 AAA</h3>
+            <p>Aksesibilitas digital tingkat tertinggi untuk inklusivitas penuh bagi semua pengguna termasuk disabilitas.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section id="faq" class="section section-alt" aria-labelledby="faq-title">
+      <div class="container">
+        <div class="section-header" data-aos="fade-up">
+          <h2 id="faq-title">Pertanyaan Umum (FAQ)</h2>
+          <p>Jawaban untuk pertanyaan yang sering diajukan tentang layanan dan proses verifikasi kami.</p>
+        </div>
+        
+        <div class="features-grid" style="grid-template-columns: 1fr;">
+          <details class="feature-card" data-aos="fade-up">
+            <summary style="cursor: pointer; font-weight: var(--font-semibold); padding: var(--space-4); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Apakah platform ini legal dan terdaftar?</span>
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div style="padding: 0 var(--space-4) var(--space-4); color: var(--color-text-secondary);">
+              Ya, PT Enterprise Solutions Indonesia terdaftar resmi di Kementerian Hukum dan HAM dengan AHU-0012345.AH.01.01.TAHUN 2020 dan memiliki izin operasional dari instansi terkait.
+            </div>
+          </details>
+          
+          <details class="feature-card" data-aos="fade-up" data-aos-delay="100">
+            <summary style="cursor: pointer; font-weight: var(--font-semibold); padding: var(--space-4); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Bagaimana keamanan data saya?</span>
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div style="padding: 0 var(--space-4) var(--space-4); color: var(--color-text-secondary);">
+              Data Anda dienkripsi dengan AES-256, disimpan di data center Tier III+ dengan redundansi geografis, dan dilindungi oleh firewall enterprise dengan monitoring 24/7.
+            </div>
+          </details>
+          
+          <details class="feature-card" data-aos="fade-up" data-aos-delay="200">
+            <summary style="cursor: pointer; font-weight: var(--font-semibold); padding: var(--space-4); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Berapa lama proses verifikasi?</span>
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div style="padding: 0 var(--space-4) var(--space-4); color: var(--color-text-secondary);">
+              Estimasi standar 1-3 hari kerja setelah dokumen lengkap. Layanan priority tersedia untuk enterprise dengan SLA <24 jam.
+            </div>
+          </details>
+          
+          <details class="feature-card" data-aos="fade-up" data-aos-delay="300">
+            <summary style="cursor: pointer; font-weight: var(--font-semibold); padding: var(--space-4); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+              <span>Apakah ada biaya tersembunyi?</span>
+              <span aria-hidden="true">+</span>
+            </summary>
+            <div style="padding: 0 var(--space-4) var(--space-4); color: var(--color-text-secondary);">
+              Tidak. Semua biaya transparan dan ditampilkan di dashboard sebelum konfirmasi. Tidak ada biaya admin, deposit, atau validasi di muka.
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+    
+    <!-- CTA Section -->
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="container">
+        <h2 id="cta-title">Siap Transformasi Proses Verifikasi Anda?</h2>
+        <p>Bergabunglah dengan 500+ organisasi yang telah mempercayakan proses verifikasi mereka pada platform enterprise kami.</p>
+        <button class="btn btn-accent" onclick="openModal('register')" style="padding: var(--space-4) var(--space-10); font-size: var(--text-lg);">
+          Daftar Gratis Sekarang
+        </button>
+        <p style="margin-top: var(--space-4); font-size: var(--text-sm); opacity: 0.8;">
+          ✓ Tidak memerlukan kartu kredit   •   ✓ Setup dalam 5 menit   •   ✓ Cancel kapan saja
+        </p>
+      </div>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo">
+            <div class="logo-icon">🏛️</div>
+            <span>Enterprise</span>
+          </div>
+          <p>PT Enterprise Solutions Indonesia<br/>
+          Gedung Enterprise Tower, Lt. 25<br/>
+          Jakarta Selatan 12190, Indonesia</p>
+          <p style="margin-top: var(--space-4);">
+            <strong>Telp:</strong> +62-21-1234-5678<br/>
+            <strong>Email:</strong> support@enterprise.co.id<br/>
+            <strong>Jam Operasional:</strong> 24/7
+          </p>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Produk</h4>
+          <a href="#fitur">Fitur</a>
+          <a href="#proses">Proses</a>
+          <a href="#keamanan">Keamanan</a>
+          <a href="#faq">FAQ</a>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Perusahaan</h4>
+          <a href="#kontak">Kontak</a>
+          <a href="#">Tentang Kami</a>
+          <a href="#">Karir</a>
+          <a href="#">Media</a>
+        </div>
+        
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="#">Kebijakan Privasi</a>
+          <a href="#">Syarat & Ketentuan</a>
+          <a href="#">Kebijakan Cookie</a>
+          <a href="#">Aksesibilitas</a>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© 2020-2026 PT Enterprise Solutions Indonesia. Hak Cipta Dilindungi.</p>
+        <div class="footer-badges">
+          <span class="badge">🔒 TLS 1.3</span>
+          <span class="badge">✓ ISO 27001</span>
+          <span class="badge">💳 PCI-DSS</span>
+          <span class="badge">🇮🇩 UU PDP</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Modal: Register -->
+  <div id="modal-register" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-register-title">
+    <div class="modal">
+      <div class="modal-header">
         <div>
-          <p>Saya percaya dalam menulis kode yang tidak hanya berfungsi tetapi juga elegan dan mudah dipelihara. Pendekatan saya menggabungkan keunggulan teknis dengan desain yang berpusat pada pengguna untuk menciptakan solusi yang benar-benar memecahkan masalah.</p>
-          <div class="philosophy">
-            <p><strong>Filosofi Pribadi:</strong> Selain coding, saya bersemangat dalam berbagi pengetahuan, berkontribusi pada proyek open-source, dan terus belajar tentang teknologi yang sedang berkembang.</p>
+          <h3 id="modal-register-title">Daftar Akun Enterprise</h3>
+          <p style="margin: 0; font-size: var(--text-sm); color: var(--color-text-secondary);">Lengkapi formulir untuk memulai</p>
+        </div>
+        <button class="modal-close" onclick="closeModal('register')" aria-label="Tutup">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-register" novalidate>
+          <div class="form-group">
+            <label for="reg-name" class="form-label">Nama Lengkap *</label>
+            <input type="text" id="reg-name" class="form-input" required minlength="3" pattern="^[a-zA-Z\s]{3,}$" placeholder="Sesuai KTP" />
+            <span class="form-error">Nama minimal 3 karakter</span>
           </div>
-          <div class="contact-info">
-            <div class="contact-item">
-              <div class="contact-icon">📧</div>
-              <div>teukurijul@gmail.com</div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">📍</div>
-              <div>Aceh, Indonesia</div>
-            </div>
-            <div class="contact-item">
-              <div class="contact-icon">🎯</div>
-              <div>Pengembangan Full-stack, Arsitektur Cloud, DevOps</div>
-            </div>
+          
+          <div class="form-group">
+            <label for="reg-email" class="form-label">Email *</label>
+            <input type="email" id="reg-email" class="form-input" required placeholder="email@perusahaan.co.id" />
+            <span class="form-error">Email tidak valid</span>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- EDUCATION -->
-    <section class="section fade-in" data-animate>
-      <h2>Pendidikan</h2>
-      <div class="timeline-item">
-        <div class="timeline-date">2015 - 2019</div>
-        <div class="timeline-title">Sarjana Teknik Informatika</div>
-        <div class="timeline-org">Universitas Syiah Kuala</div>
-        <p>IPK: 3.75/4.00 • Aktif di UKM Teknologi Informasi • Lulusan Terbaik Fakultas</p>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">2012 - 2015</div>
-        <div class="timeline-title">SMK Negeri 1 Nisam / SMA Negeri 1 Banda Aceh</div>
-        <div class="timeline-org">Jurusan TKJ</div>
-        <p>Ketua OSIS • Juara Olimpiade Komputer Tingkat Provinsi</p>
-      </div>
-    </section>
-
-    <!-- EXPERIENCE -->
-    <section class="section fade-in" data-animate>
-      <h2>Pengalaman Kerja</h2>
-      <div class="timeline-item">
-        <div class="timeline-date">Saat ini</div>
-        <div class="timeline-title">Software Engineer Senior</div>
-        <div class="timeline-org">PT. Teknologi Digital Indonesia</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Sebelumnya</div>
-        <div class="timeline-title">Software Engineer</div>
-        <div class="timeline-org">Startup Aceh Digital</div>
-      </div>
-      <div class="timeline-item">
-        <div class="timeline-date">Magang</div>
-        <div class="timeline-title">Pengembang Web</div>
-        <div class="timeline-org">Dinas Kominfo Aceh</div>
-      </div>
-    </section>
-
-    <!-- PROJECTS -->
-    <section class="section fade-in" data-animate>
-      <h2>Proyek Unggulan</h2>
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3>Sistem Manajemen Sekolah Aceh</h3>
-          <p>Platform komprehensif untuk manajemen sekolah di wilayah Aceh, mencakup absensi, nilai, dan komunikasi orang tua.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">Node.js</span>
-            <span class="tech-tag">MongoDB</span>
-            <span class="tech-tag">AWS</span>
+          
+          <div class="form-group">
+            <label for="reg-phone" class="form-label">Nomor Telepon *</label>
+            <input type="tel" id="reg-phone" class="form-input" required pattern="^(\+62|0)8[1-9][0-9]{7,11}$" placeholder="+62 812-3456-7890" />
+            <span class="form-error">Format: +62 8xx-xxxx-xxxx</span>
           </div>
-        </div>
-        <div class="project-card">
-          <h3>Aplikasi Pariwisata Aceh</h3>
-          <p>Aplikasi mobile dan web untuk mempromosikan destinasi wisata di Aceh kepada wisatawan domestik dan internasional.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">React Native</span>
-            <span class="tech-tag">Express.js</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">Google Cloud</span>
+          
+          <div class="form-group">
+            <label for="reg-password" class="form-label">Kata Sandi *</label>
+            <input type="password" id="reg-password" class="form-input" required minlength="8" placeholder="Minimal 8 karakter" />
+            <span class="form-error">Kata sandi minimal 8 karakter</span>
           </div>
-        </div>
-        <div class="project-card">
-          <h3>Sistem Monitoring Bencana Alam</h3>
-          <p>Sistem pemantauan bencana alam khusus untuk wilayah rawan bencana di Aceh dan Sumatera Utara.</p>
-          <div class="tech-tags">
-            <span class="tech-tag">Vue.js</span>
-            <span class="tech-tag">Python</span>
-            <span class="tech-tag">InfluxDB</span>
-            <span class="tech-tag">Azure</span>
+          
+          <div class="form-group">
+            <label class="form-label" style="display: flex; align-items: flex-start; gap: var(--space-2);">
+              <input type="checkbox" id="reg-terms" required style="width: auto; margin-top: 4px;" />
+              <span>Saya menyetujui <a href="#">Syarat & Ketentuan</a> dan <a href="#">Kebijakan Privasi</a> *</span>
+            </label>
           </div>
-        </div>
+        </form>
       </div>
-    </section>
-
-    <!-- SKILLS -->
-    <section class="section fade-in" data-animate>
-      <h2>Keterampilan Teknis</h2>
-      <div class="skills-grid">
-        <div class="skill-category">
-          <h4>Bahasa Pemrograman</h4>
-          <ul class="skill-list">
-            <li>JavaScript/TypeScript</li>
-            <li>Python</li>
-            <li>Java</li>
-            <li>SQL</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h4>Framework & Library</h4>
-          <ul class="skill-list">
-            <li>React & React Native</li>
-            <li>Node.js & Express</li>
-            <li>Vue.js</li>
-            <li>Next.js</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h4>Database</h4>
-          <ul class="skill-list">
-            <li>MongoDB</li>
-            <li>PostgreSQL</li>
-            <li>MySQL</li>
-            <li>Redis</li>
-          </ul>
-        </div>
-        <div class="skill-category">
-          <h4>Tools & Platform</h4>
-          <ul class="skill-list">
-            <li>AWS</li>
-            <li>Google Cloud</li>
-            <li>Microsoft Azure</li>
-            <li>Docker & Kubernetes</li>
-            <li>Git & GitHub</li>
-          </ul>
-        </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('register')">Batal</button>
+        <button class="btn btn-primary" onclick="handleRegister()">Daftar Sekarang</button>
       </div>
-    </section>
-
-    <!-- CERTIFICATIONS -->
-    <section class="section fade-in" data-animate>
-      <h2>Sertifikasi</h2>
-      <div class="certifications-grid">
-        <div class="cert-card">
-          <h3>AWS Certified Developer - Associate</h3>
-          <div class="cert-provider">Amazon Web Services</div>
-          <div class="cert-year">2023</div>
-        </div>
-        <div class="cert-card">
-          <h3>Google Professional Cloud Developer</h3>
-          <div class="cert-provider">Google Cloud</div>
-          <div class="cert-year">2022</div>
-        </div>
-        <div class="cert-card">
-          <h3>Microsoft Certified: Azure Developer Associate</h3>
-          <div class="cert-provider">Microsoft</div>
-          <div class="cert-year">2021</div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SOCIALS -->
-    <section class="section fade-in" data-animate>
-      <h2>Ikuti Saya</h2>
-      <div class="socials">
-        <a href="https://www.facebook.com/share/1BsavFiyEV/" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384005.png" alt="" />
-        </a>
-        <a href="https://www.instagram.com/teuku_rijul" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">
-          <img src="https://cdn-icons-png.flaticon.com/512/1384/1384015.png" alt="" />
-        </a>
-        <a href="https://www.tiktok.com/@teuku.rijul" target="_blank" rel="noopener" class="social-icon" aria-label="TikTok">
-          <img src="https://cdn-icons-png.flaticon.com/512/3046/3046121.png" alt="" />
-        </a>
-      </div>
-    </section>
-
-    <!-- COLLABORATION -->
-    <section class="section fade-in" data-animate>
-      <h2>Mari Berkolaborasi</h2>
-      <p>Saya sedang terbuka untuk peluang dan kolaborasi baru. Jangan ragu untuk menghubungi saya jika Anda memiliki proyek menarik atau hanya ingin berkenalan!</p>
-      <div style="text-align: center; margin-top: 24px;">
-        <a class="cta" href="https://wa.me/62895328323138" target="_blank" rel="noopener">Mulai Kolaborasi Sekarang</a>
-      </div>
-    </section>
-
-    <footer>© 2026 Teuku Rijul — Software Engineer. All Rights Reserved.</footer>
+    </div>
   </div>
-
-  <!-- WhatsApp Floating Button -->
-  <a href="https://wa.me/62895328323138" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Chat via WhatsApp">
-    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
-  </a>
-
+  
+  <!-- Modal: Login -->
+  <div id="modal-login" class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-login-title">
+    <div class="modal">
+      <div class="modal-header">
+        <h3 id="modal-login-title">Masuk ke Akun</h3>
+        <button class="modal-close" onclick="closeModal('login')" aria-label="Tutup">×</button>
+      </div>
+      <div class="modal-body">
+        <form id="form-login" novalidate>
+          <div class="form-group">
+            <label for="login-email" class="form-label">Email</label>
+            <input type="email" id="login-email" class="form-input" required placeholder="email@perusahaan.co.id" />
+          </div>
+          
+          <div class="form-group">
+            <label for="login-password" class="form-label">Kata Sandi</label>
+            <input type="password" id="login-password" class="form-input" required placeholder="••••••••" />
+          </div>
+          
+          <div class="form-group" style="display: flex; justify-content: space-between; align-items: center;">
+            <label style="display: flex; align-items: center; gap: var(--space-2); font-size: var(--text-sm);">
+              <input type="checkbox" id="login-remember" style="width: auto;" />
+              Ingat saya
+            </label>
+            <a href="#" style="font-size: var(--text-sm);" onclick="event.preventDefault(); showToast('info', 'Reset Password', 'Tautan reset telah dikirim ke email Anda.');">Lupa kata sandi?</a>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-ghost" onclick="closeModal('login')">Batal</button>
+        <button class="btn btn-primary" onclick="handleLogin()">Masuk</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- Toast Container -->
+  <div id="toast-container" class="toast-container" aria-live="polite" aria-atomic="true"></div>
+  
+  <!-- Cookie Banner -->
+  <div id="cookie-banner" class="cookie-banner" role="region" aria-label="Persetujuan cookie">
+    <div class="container cookie-content">
+      <p class="cookie-text">
+        Kami menggunakan cookie untuk meningkatkan pengalaman Anda. Dengan melanjutkan, Anda menyetujui 
+        <a href="#">Kebijakan Cookie</a> kami.
+      </p>
+      <div class="cookie-actions">
+        <button class="btn btn-ghost" onclick="handleCookieChoice(false)">Tolak</button>
+        <button class="btn btn-primary" onclick="handleCookieChoice(true)">Terima</button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- JavaScript -->
   <script>
-    // Fade-in on scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('appear');
-          observer.unobserve(entry.target);
+    // ===== UTILITIES =====
+    const $ = (selector, ctx = document) => ctx.querySelector(selector);
+    const $$ = (selector, ctx = document) => ctx.querySelectorAll(selector);
+    
+    // ===== SCROLL ANIMATION =====
+    const initScrollAnimations = () => {
+      if (!('IntersectionObserver' in window)) {
+        $$('[data-aos]').forEach(el => el.classList.add('aos-animate'));
+        return;
+      }
+      
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('aos-animate');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+      
+      $$('[data-aos]').forEach(el => observer.observe(el));
+    };
+    
+    // ===== MOBILE NAV =====
+    const initMobileNav = () => {
+      const toggle = $('.btn-mobile-toggle');
+      const nav = $('#main-nav');
+      
+      if (!toggle || !nav) return;
+      
+      toggle.addEventListener('click', () => {
+        const expanded = toggle.getAttribute('aria-expanded') === 'true';
+        toggle.setAttribute('aria-expanded', !expanded);
+        nav.classList.toggle('active');
+      });
+      
+      $$('.nav-link', nav).forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 768) {
+            nav.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    };
+    
+    // ===== HEADER SCROLL =====
+    const initHeaderScroll = () => {
+      const header = $('.header');
+      if (!header) return;
+      
+      const onScroll = () => {
+        if (window.scrollY > 50) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      };
+      
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+    };
+    
+    // ===== MODAL =====
+    let previousFocus = null;
+    
+    const openModal = (modalName) => {
+      const modal = $(`#modal-${modalName}`);
+      if (!modal) return;
+      
+      previousFocus = document.activeElement;
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      
+      setTimeout(() => {
+        const firstInput = modal.querySelector('input, button');
+        if (firstInput) firstInput.focus();
+      }, 100);
+      
+      modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal(modalName);
+      }, { once: true });
+      
+      document.addEventListener('keydown', function onEscape(e) {
+        if (e.key === 'Escape') {
+          closeModal(modalName);
+          document.removeEventListener('keydown', onEscape);
         }
       });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('[data-animate]').forEach(el => observer.observe(el));
+    };
+    
+    const closeModal = (modalName) => {
+      const modal = $(`#modal-${modalName}`);
+      if (!modal) return;
+      
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+      
+      const form = modal.querySelector('form');
+      if (form) {
+        form.reset();
+        $$('.form-input.error', form).forEach(input => input.classList.remove('error'));
+      }
+      
+      if (previousFocus) previousFocus.focus();
+    };
+    
+    // ===== FORM VALIDATION =====
+    const validateField = (input) => {
+      const errorSpan = input.parentElement.querySelector('.form-error');
+      
+      if (!input.validity.valid) {
+        input.classList.add('error');
+        return false;
+      } else {
+        input.classList.remove('error');
+        return true;
+      }
+    };
+    
+    const initFormValidation = () => {
+      const regForm = $('#form-register');
+      if (regForm) {
+        $$('.form-input', regForm).forEach(input => {
+          input.addEventListener('blur', () => validateField(input));
+          input.addEventListener('input', () => {
+            if (input.classList.contains('error')) validateField(input);
+          });
+        });
+      }
+      
+      const loginForm = $('#form-login');
+      if (loginForm) {
+        $$('.form-input', loginForm).forEach(input => {
+          input.addEventListener('blur', () => validateField(input));
+        });
+      }
+    };
+    
+    // ===== FORM HANDLERS =====
+    const handleRegister = () => {
+      const form = $('#form-register');
+      const inputs = $$('.form-input', form);
+      let isValid = true;
+      
+      inputs.forEach(input => {
+        if (!validateField(input)) isValid = false;
+      });
+      
+      const terms = $('#reg-terms');
+      if (!terms?.checked) {
+        showToast('error', 'Persyaratan', 'Anda harus menyetujui Syarat & Ketentuan');
+        isValid = false;
+      }
+      
+      if (isValid) {
+        const btn = form.querySelector('.btn-primary');
+        const originalText = btn.innerHTML;
+        btn.disabled = true;
+        btn.classList.add('btn-loading');
+        btn.innerHTML = 'Memproses...';
+        
+        setTimeout(() => {
+          closeModal('register');
+          showToast('success', 'Pendaftaran Berhasil', 'Silakan cek email untuk verifikasi akun Anda.');
+          btn.disabled = false;
+          btn.classList.remove('btn-loading');
+          btn.innerHTML = originalText;
+          form.reset();
+        }, 2000);
+      } else {
+        showToast('error', 'Validasi Gagal', 'Periksa kembali data yang Anda masukkan.');
+      }
+    };
+    
+    const handleLogin = () => {
+      const email = $('#login-email')?.value;
+      const password = $('#login-password')?.value;
+      
+      if (!email || !password) {
+        showToast('warning', 'Login', 'Email dan kata sandi harus diisi');
+        return;
+      }
+      
+      const btn = $('#form-login .btn-primary');
+      btn.disabled = true;
+      btn.classList.add('btn-loading');
+      btn.innerHTML = 'Memverifikasi...';
+      
+      setTimeout(() => {
+        closeModal('login');
+        showToast('success', 'Selamat Datang!', 'Anda telah berhasil masuk.');
+        btn.disabled = false;
+        btn.classList.remove('btn-loading');
+        btn.innerHTML = 'Masuk';
+      }, 1500);
+    };
+    
+    // ===== TOAST =====
+    const showToast = (type, title, message, duration = 5000) => {
+      const container = $('#toast-container');
+      if (!container) return;
+      
+      const icons = { success: '✓', warning: '⚠', error: '✕', info: 'ℹ' };
+      
+      const toast = document.createElement('div');
+      toast.className = `toast ${type}`;
+      toast.setAttribute('role', 'alert');
+      toast.innerHTML = `
+        <span class="toast-icon" aria-hidden="true">${icons[type] || 'ℹ'}</span>
+        <div class="toast-content">
+          <h4>${title}</h4>
+          <p>${message}</p>
+        </div>
+        <button class="toast-close" onclick="this.parentElement.remove()" aria-label="Tutup">×</button>
+      `;
+      
+      container.appendChild(toast);
+      
+      requestAnimationFrame(() => toast.classList.add('show'));
+      
+      setTimeout(() => {
+        toast.style.opacity = '0';
+        toast.style.transform = 'translateX(120%)';
+        setTimeout(() => toast.remove(), 300);
+      }, duration);
+    };
+    
+    // ===== COOKIE =====
+    const initCookieBanner = () => {
+      const banner = $('#cookie-banner');
+      if (!banner) return;
+      
+      try {
+        const consent = localStorage.getItem('cookie-consent');
+        if (consent) return;
+      } catch (e) {}
+      
+      setTimeout(() => {
+        banner.classList.add('show');
+      }, 2000);
+    };
+    
+    const handleCookieChoice = (accepted) => {
+      try {
+        localStorage.setItem('cookie-consent', JSON.stringify({ accepted, timestamp: new Date().toISOString() }));
+      } catch (e) {}
+      
+      const banner = $('#cookie-banner');
+      if (banner) banner.classList.remove('show');
+      
+      if (accepted) {
+        showToast('success', 'Preferensi Disimpan', 'Cookie telah diaktifkan.');
+      } else {
+        showToast('info', 'Preferensi Disimpan', 'Hanya cookie esensial yang aktif.');
+      }
+    };
+    
+    // ===== SMOOTH SCROLL =====
+    const scrollToSection = (sectionId) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        const headerOffset = 80;
+        const elementPosition = section.getBoundingClientRect().top;
+        const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+        
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth'
+        });
+      }
+    };
+    
+    // ===== INIT =====
+    document.addEventListener('DOMContentLoaded', () => {
+      initScrollAnimations();
+      initMobileNav();
+      initHeaderScroll();
+      initFormValidation();
+      initCookieBanner();
+      
+      window.openModal = openModal;
+      window.closeModal = closeModal;
+      window.handleRegister = handleRegister;
+      window.handleLogin = handleLogin;
+      window.showToast = showToast;
+      window.handleCookieChoice = handleCookieChoice;
+      window.scrollToSection = scrollToSection;
+    });
   </script>
 </body>
 </html>
