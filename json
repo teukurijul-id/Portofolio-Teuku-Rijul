@@ -1,9 +1,0 @@
-{
-  "name": "Enterprise Verifikasi",
-  "short_name": "Enterprise",
-  "start_url": "./index.html",
-  "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#0d2844",
-  "icons": []
-}
