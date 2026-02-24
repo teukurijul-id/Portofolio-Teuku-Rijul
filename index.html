@@ -3,401 +3,400 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Priority Gateway | SiCepat Express Enterprise Division</title>
+    <title>Portal Resmi | DJBC & SiCepat Express Enterprise</title>
     
-    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=JetBrains+Mono:wght@500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 
     <style>
         :root {
-            --primary: #E31E24;
-            --secondary: #0F172A;
-            --accent-gold: #D4AF37;
-            --glass: rgba(255, 255, 255, 0.8);
-            --bg-body: #F3F4F6;
-            --text-dark: #1E293B;
-            --text-light: #64748B;
+            --gov-navy: #002B5C;
+            --gov-gold: #D4AF37;
+            --sicepat-red: #E31E24;
+            --slate-bg: #F1F5F9;
         }
 
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        body { 
-            background-color: var(--bg-body); 
-            font-family: 'Plus Jakarta Sans', sans-serif; 
-            color: var(--text-dark);
-            overflow-x: hidden;
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: var(--slate-bg);
+            color: #1e293b;
         }
 
-        /* Loading Animation Overlay */
-        #loader {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: var(--secondary); z-index: 10000;
-            display: flex; justify-content: center; align-items: center;
-            transition: opacity 0.8s ease;
-        }
+        /* Kop Surat Standard */
+        .kop-line-bold { border-bottom: 3.5px solid black; }
+        .kop-line-thin { border-bottom: 1px solid black; margin-top: 2px; }
 
-        /* Enterprise Header */
-        nav {
-            background: rgba(255, 255, 255, 0.9);
-            backdrop-filter: blur(15px);
-            padding: 15px 8%;
-            display: flex; justify-content: space-between; align-items: center;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-            position: sticky; top: 0; z-index: 1000;
-        }
-
-        .logo-box { display: flex; align-items: center; gap: 10px; }
-        .logo-box h2 { font-weight: 800; letter-spacing: -1.5px; font-size: 1.6rem; }
-        .logo-box h2 span { color: var(--primary); }
-
-        /* Dashboard Layout */
-        .dashboard-container {
-            max-width: 1300px;
-            margin: 40px auto;
-            display: grid;
-            grid-template-columns: 1fr 400px;
-            gap: 30px;
-            padding: 0 20px;
-        }
-
-        /* Document Area */
+        /* Document Canvas */
         .doc-canvas {
             background: white;
-            padding: 80px;
-            border-radius: 4px;
-            box-shadow: 0 40px 100px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 800px;
+            min-height: 1050px;
+            margin: 0 auto;
+            padding: 50px 60px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.08);
             position: relative;
-            transition: transform 0.3s ease;
+            border: 1px solid #e2e8f0;
         }
 
-        .doc-canvas:hover { transform: translateY(-5px); }
-
-        .stamp-official {
-            position: absolute; top: 40px; right: 40px;
-            border: 4px double var(--primary);
-            color: var(--primary);
-            padding: 10px; font-weight: 900;
-            transform: rotate(15deg); opacity: 0.6;
-            font-size: 0.8rem; border-radius: 8px;
+        /* Watermark */
+        .watermark {
+            position: absolute; top: 50%; left: 50%;
+            transform: translate(-50%, -50%) rotate(-45deg);
+            font-size: 6rem; font-weight: 900; color: rgba(0,0,0,0.03);
+            pointer-events: none; z-index: 0; white-space: nowrap;
+            text-transform: uppercase;
         }
 
-        /* Tracking Component */
-        .tracking-bar {
-            background: var(--secondary);
-            padding: 30px; border-radius: 20px;
-            color: white; margin-bottom: 30px;
-        }
-
-        .progress-line {
-            height: 6px; background: rgba(255,255,255,0.1);
-            border-radius: 10px; margin: 20px 0; position: relative;
-        }
-
-        .progress-fill {
-            height: 100%; width: 75%; 
-            background: linear-gradient(90deg, var(--primary), #FF5F6D);
-            border-radius: 10px; transition: 2s ease;
+        /* Layered Authentication */
+        .auth-container {
             position: relative;
+            width: 280px;
+            height: 160px;
+            margin-left: auto;
+        }
+        .auth-layer { position: absolute; pointer-events: none; }
+        .layer-materai { width: 85px; left: -10px; top: 30px; z-index: 1; transform: rotate(-5deg); filter: drop-shadow(2px 4px 6px rgba(0,0,0,0.1)); }
+        .layer-ttd { width: 170px; left: 30px; top: 25px; z-index: 2; mix-blend-mode: multiply; }
+        .layer-stempel { width: 135px; right: 10px; top: -10px; z-index: 3; mix-blend-mode: multiply; opacity: 0.85; transform: rotate(10deg); }
+
+        /* Navigation */
+        .nav-glass {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
 
-        .progress-fill::after {
-            content: ''; position: absolute; right: 0; top: -5px;
-            width: 16px; height: 16px; background: white;
-            border: 4px solid var(--primary); border-radius: 50%;
-            box-shadow: 0 0 15px var(--primary);
+        /* Widgets */
+        .sidebar-widget {
+            background: white;
+            border-radius: 16px;
+            padding: 24px;
+            border: 1px solid #e2e8f0;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.02);
         }
 
-        /* Content Typography */
-        .title-h1 { 
-            font-family: 'Playfair Display', serif; 
-            font-size: 2rem; margin-bottom: 30px; 
-            border-left: 5px solid var(--primary); padding-left: 20px;
+        .btn-primary-gov {
+            background: var(--gov-navy);
+            color: white;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .btn-primary-gov:hover {
+            background: var(--sicepat-red);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(227, 30, 36, 0.2);
         }
 
-        .executive-box {
-            background: #F8FAFC; border-radius: 12px;
-            padding: 30px; border: 1px solid #E2E8F0;
-            margin: 30px 0;
-        }
-
-        /* Sidebar Widgets */
-        .widget {
-            background: white; border-radius: 20px;
-            padding: 30px; box-shadow: 0 10px 30px rgba(0,0,0,0.03);
-            margin-bottom: 25px; border: 1px solid rgba(0,0,0,0.02);
-        }
-
-        .status-badge {
-            background: #FEF2F2; color: var(--primary);
-            padding: 8px 15px; border-radius: 50px;
-            font-size: 0.75rem; font-weight: 800;
-            display: inline-flex; align-items: center; gap: 8px;
-        }
-
-        /* Premium Buttons */
-        .btn-premium {
-            background: var(--secondary);
-            color: white; width: 100%;
-            padding: 22px; border-radius: 16px;
-            font-weight: 700; border: none;
-            cursor: pointer; transition: 0.4s;
-            display: flex; justify-content: center; align-items: center; gap: 12px;
-            font-size: 1.1rem;
-            box-shadow: 0 20px 40px rgba(15, 23, 42, 0.2);
-        }
-
-        .btn-premium:hover {
-            background: var(--primary);
-            transform: scale(1.02);
-            box-shadow: 0 20px 40px rgba(227, 30, 36, 0.3);
-        }
-
-        /* Payment Modal Glassmorphism */
-        .modal-wrap {
-            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.85); backdrop-filter: blur(10px);
-            display: none; justify-content: center; align-items: center; z-index: 2000;
-        }
-
-        .payment-card {
-            background: white; width: 550px; border-radius: 30px;
-            overflow: hidden; animation: zoomIn 0.3s;
-        }
-
-        .bank-option {
-            display: flex; align-items: center; gap: 15px;
-            padding: 20px; border: 2px solid #F1F5F9;
-            border-radius: 15px; margin-bottom: 15px;
-            cursor: pointer; transition: 0.3s;
-        }
-
-        .bank-option:hover { border-color: var(--primary); background: #FFF5F5; }
-
-        /* Floating Support */
-        .fab-support {
-            position: fixed; bottom: 30px; right: 30px;
-            width: 65px; height: 65px; background: var(--primary);
-            border-radius: 50%; display: flex; justify-content: center; align-items: center;
-            color: white; font-size: 1.5rem; cursor: pointer;
-            box-shadow: 0 10px 30px rgba(227, 30, 36, 0.4);
-            transition: 0.3s; z-index: 1000;
-        }
-
-        .fab-support:hover { transform: rotate(15deg) scale(1.1); }
-
-        @keyframes zoomIn { from { transform: scale(0.9); opacity: 0; } to { transform: scale(1); opacity: 1; } }
-
-        @media (max-width: 900px) {
-            .dashboard-container { grid-template-columns: 1fr; }
-            .doc-canvas { padding: 40px 20px; }
+        @media print {
+            .no-print { display: none !important; }
+            body { background: white; }
+            .doc-canvas { box-shadow: none; border: none; margin: 0; padding: 0; width: 100%; max-width: none; }
         }
     </style>
 </head>
-<body onload="initSite()">
+<body class="antialiased">
 
-<div id="loader">
-    <div class="animate__animated animate__pulse animate__infinite">
-        <h2 style="color:white; font-family:serif; font-size: 2rem;">SICEPAT<span style="color:var(--primary)">.</span></h2>
-    </div>
-</div>
-
-<nav>
-    <div class="logo-box">
-        <h2>SICEPAT<span>.</span>PRIORITY</h2>
-    </div>
-    <div style="display: flex; gap: 20px; align-items: center;">
-        <span style="font-size: 0.8rem; font-weight: 700; color: var(--text-light);">
-            <i class="fas fa-user-shield"></i> ID: 8829-XLC
-        </span>
-        <div style="width: 40px; height: 40px; background: #E2E8F0; border-radius: 50%; display: flex; justify-content: center; align-items: center;">
-            <i class="fas fa-user"></i>
-        </div>
-    </div>
-</nav>
-
-<div class="dashboard-container">
-    
-    <div class="animate__animated animate__fadeInLeft">
-        <div class="tracking-bar">
-            <div style="display:flex; justify-content: space-between; font-size: 0.8rem; opacity: 0.8;">
-                <span>Shipment ID: 001776344300</span>
-                <span>Location: CGK - INTERNATIONAL HUB</span>
+    <!-- Navbar -->
+    <nav class="nav-glass sticky top-0 z-[100] no-print px-6 py-3">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <img src="https://i.ibb.co.com/xq9Qf08z/IMG-20260129-202430.jpg" class="h-9" alt="Kemenkeu">
+                <div class="h-6 w-[1px] bg-slate-200"></div>
+                <div class="flex flex-col">
+                    <span class="text-[10px] font-extrabold text-slate-400 uppercase tracking-tighter">Official Hub</span>
+                    <span class="text-xs font-black text-slate-900">SICEPAT<span class="text-red-600">.</span>PRIORITY</span>
+                </div>
             </div>
-            <div class="progress-line">
-                <div class="progress-fill" id="p-bar"></div>
-            </div>
-            <div style="display:flex; justify-content: space-between; font-size: 0.75rem; font-weight: 700;">
-                <span>PICKED UP</span>
-                <span>SORTING</span>
-                <span style="color: var(--primary);">ON HOLD</span>
-                <span style="opacity: 0.4;">DELIVERED</span>
+            <div class="flex items-center gap-4">
+                <div class="hidden md:flex flex-col text-right mr-4">
+                    <span class="text-[9px] font-bold text-slate-400">LOGGED AS OPERATOR</span>
+                    <span class="text-[11px] font-black text-slate-800 tracking-tight">ID-8829/XLC/ADM</span>
+                </div>
+                <button onclick="window.print()" class="text-[10px] font-bold bg-slate-100 text-slate-700 px-5 py-2.5 rounded-lg hover:bg-slate-200 transition-all uppercase tracking-widest">
+                    <i class="fas fa-print mr-2"></i> Print Doc
+                </button>
             </div>
         </div>
+    </nav>
 
-        <div class="doc-canvas">
-            <div class="stamp-official">CERTIFIED BY<br>COMPLIANCE DEPT</div>
-            
-            <header style="text-align: center; margin-bottom: 50px;">
-                <p style="text-transform: uppercase; font-size: 0.7rem; letter-spacing: 4px; color: var(--text-light); margin-bottom: 10px;">Official Communication</p>
-                <h1 class="title-h1">Pemberitahuan Kepatuhan Pengiriman Internasional</h1>
-            </header>
-
-            <div style="display: flex; justify-content: space-between; margin-bottom: 50px; font-size: 0.85rem;">
-                <div>
-                    <label style="color: var(--text-light); font-weight: 700;">PENERIMA:</label>
-                    <p style="font-weight: 800; font-size: 1rem;">[Nama Penerima]</p>
-                    <p>Priority Hub Terminal 3</p>
-                </div>
-                <div style="text-align: right;">
-                    <label style="color: var(--text-light); font-weight: 700;">TANGGAL PENERBITAN:</label>
-                    <p style="font-weight: 800;">25 Februari 2026</p>
-                    <p>Ref: SICEPAT/LEG-2201/2026</p>
-                </div>
-            </div>
-
-            <article style="line-height: 1.8; color: #475569; text-align: justify;">
-                <p>Kami informasikan bahwa berdasarkan protokol keamanan kargo otomatis, kiriman anda telah mencapai tahap <strong>Final Clearance</strong>. Namun, sistem mengidentifikasi diperlukannya aktivasi <i>Security Bond</i> (Jaminan Keamanan) sebagai prasyarat pelepasan aset dari area pabean internal kami.</p>
-                
-                <div class="executive-box">
-                    <h4 style="color: var(--secondary); margin-bottom: 10px;"><i class="fas fa-info-circle"></i> Instruksi Jaminan Verifikasi</h4>
-                    <p style="font-size: 0.9rem;">
-                        Penerima diwajibkan menyetorkan dana jaminan sementara sebesar <strong>Rp 1.700.000,00</strong>. Sistem akan melakukan validasi data selama 45 menit, dan setelah status dinyatakan "CLEARED", dana tersebut akan dikreditkan kembali secara otomatis sebesar 95% ke saldo Anda.
-                    </p>
-                </div>
-
-                <p>Kegagalan pemenuhan validasi ini dalam siklus operasional 12 jam akan mengakibatkan pengalihan paket ke status <i>Unclaimed Goods</i> yang berisiko pada penyitaan aset secara hukum oleh otoritas terkait.</p>
-            </article>
-
-            <footer style="margin-top: 60px; display: flex; justify-content: space-between; align-items: center;">
-                <div style="font-family: 'Playfair Display', serif; font-style: italic;">
-                    <p style="font-size: 1.2rem; margin-bottom: 5px;">A. Kusuma Wardhana</p>
-                    <p style="font-family: 'Plus Jakarta Sans'; font-style: normal; font-size: 0.7rem; font-weight: 700; color: var(--text-light);">CHIEF OF COMPLIANCE OFFICER</p>
-                </div>
-                <img src="https://api.qrserver.com/v1/create-qr-code/?size=90x90&data=VERIFIED-COMPLIANCE" alt="QR" style="border: 5px solid #F1F5F9; border-radius: 8px;">
-            </footer>
-        </div>
-    </div>
-
-    <div class="sidebar animate__animated animate__fadeInRight" style="animation-delay: 0.5s;">
+    <div class="max-w-7xl mx-auto px-6 py-10 grid grid-cols-1 lg:grid-cols-12 gap-10">
         
-        <div class="widget">
-            <div class="status-badge">
-                <i class="fas fa-clock"></i> TINDAKAN MENDESAK
-            </div>
-            <h3 style="margin: 15px 0 10px;">Sisa Waktu Validasi</h3>
-            <p style="font-size: 0.8rem; color: var(--text-light); margin-bottom: 20px;">Segera selesaikan sebelum sistem melakukan <i>Auto-Lock</i>.</p>
+        <!-- Document Area (Left) -->
+        <div class="lg:col-span-8 space-y-8">
             
-            <div style="font-family: monospace; font-size: 2.5rem; font-weight: 800; color: var(--primary); text-align: center; letter-spacing: 5px;" id="countdown">
-                11:59:59
+            <!-- Quick Status Header -->
+            <div class="bg-white border border-slate-200 rounded-2xl p-6 flex flex-col md:flex-row justify-between items-center gap-6 no-print">
+                <div class="flex items-center gap-5">
+                    <div class="h-14 w-14 bg-red-50 rounded-2xl flex items-center justify-center text-red-600 text-xl border border-red-100">
+                        <i class="fas fa-box-open"></i>
+                    </div>
+                    <div>
+                        <p class="text-[10px] font-bold text-slate-400 uppercase tracking-widest">Nomor Resi / AWB</p>
+                        <h4 class="text-lg font-black text-slate-900 font-mono tracking-tight">001797571540</h4>
+                    </div>
+                </div>
+                <div class="h-12 w-[1px] bg-slate-100 hidden md:block"></div>
+                <div class="flex-1 px-4 w-full">
+                    <div class="flex justify-between text-[10px] font-bold uppercase mb-2">
+                        <span class="text-red-600">Pemeriksaan Pabean</span>
+                        <span class="text-slate-400">75% Complete</span>
+                    </div>
+                    <div class="h-2 bg-slate-100 rounded-full overflow-hidden">
+                        <div class="h-full bg-red-600 rounded-full" style="width: 75%"></div>
+                    </div>
+                </div>
+                <span class="bg-red-600 text-white text-[9px] font-black px-4 py-2 rounded-lg uppercase tracking-widest animate-pulse">On Hold</span>
+            </div>
+
+            <!-- The Document -->
+            <div class="doc-canvas" id="printable-area">
+                <div class="watermark">Bea dan Cukai</div>
+
+                <!-- Kop Surat -->
+                <header class="flex items-start justify-between mb-2">
+                    <img src="https://i.ibb.co.com/xq9Qf08z/IMG-20260129-202430.jpg" class="h-24 object-contain" alt="Kemenkeu">
+                    <div class="text-center flex-1 px-4">
+                        <h1 class="text-[16px] font-bold uppercase leading-tight tracking-tight">Kementerian Keuangan Republik Indonesia</h1>
+                        <h2 class="text-[15px] font-bold uppercase leading-tight">Direktorat Jenderal Bea dan Cukai</h2>
+                        <h3 class="text-[11px] font-semibold uppercase tracking-wider">Kantor Wilayah DJBC Sulawesi Bagian Selatan</h3>
+                        <h3 class="text-[12px] font-bold uppercase text-blue-900">KPPBC Tipe Madya Pabean B Makassar</h3>
+                        <p class="text-[9px] mt-1 text-slate-500 font-medium">Jl. Nusantara No. 30, Makassar, Sulawesi Selatan. Telp: (0411) 3623340</p>
+                    </div>
+                    <img src="https://i.ibb.co.com/SwqZVzhL/IMG-20260129-202143.jpg" class="h-16 mt-2 object-contain" alt="Bea Cukai">
+                </header>
+                <div class="kop-line-bold"></div>
+                <div class="kop-line-thin"></div>
+
+                <!-- Judul Dokumen -->
+                <div class="text-center my-10 space-y-1">
+                    <h2 class="text-lg font-bold uppercase underline underline-offset-4 decoration-2 tracking-tighter">Berita Acara Penangguhan Pengeluaran Barang</h2>
+                    <p class="text-[11px] font-bold text-slate-600 uppercase">Nomor: BA-PABEAN/MKS/II/2026/08829</p>
+                </div>
+
+                <!-- Isi Dokumen -->
+                <div class="text-[13px] leading-relaxed space-y-6 text-justify" style="font-family: 'Libre Baskerville', serif;">
+                    <p>Pada hari ini, <strong>Rabu</strong> tanggal <strong>Dua Puluh Lima</strong> bulan <strong>Februari</strong> tahun <strong>Dua Ribu Dua Puluh Enam</strong>, bertempat di Kawasan Pabean Terminal Hub Makassar, kami Pejabat Pemeriksa Bea dan Cukai yang bertugas telah melakukan tindakan penangguhan sementara terhadap komoditas kiriman di bawah ini:</p>
+
+                    <div class="bg-slate-50 border-y border-slate-200 py-5 px-8 font-sans not-italic text-[11px] grid grid-cols-2 gap-10">
+                        <div class="space-y-3">
+                            <div>
+                                <p class="text-[9px] font-bold text-slate-400 uppercase">Penerima Barang (Consignee)</p>
+                                <p class="font-black text-[13px] text-slate-900">RAMIL</p>
+                                <p class="font-bold text-blue-700">ID: 852-4262-5419</p>
+                                <p class="text-slate-500">Kabupaten Bone, Sulawesi Selatan</p>
+                            </div>
+                        </div>
+                        <div class="space-y-3 border-l border-slate-200 pl-8">
+                            <div>
+                                <p class="text-[9px] font-bold text-slate-400 uppercase">Penyelenggara Pos/Logistik</p>
+                                <div class="flex items-center gap-2 mt-1">
+                                    <img src="https://i.ibb.co.com/PZ5n40x8/IMG-0244.jpg" class="h-6" alt="SiCepat">
+                                    <p class="font-black text-slate-900">SiCepat Express Enterprise</p>
+                                </div>
+                                <p class="mt-2 text-[12px] font-mono font-bold text-red-600 tracking-tighter">Resi: 001797571540</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p>Berdasarkan pemeriksaan sistem otomatis, paket tersebut terdeteksi membawa komoditas Barang Kena Cukai (BKC) yang memerlukan validasi fiskal lebih lanjut. Sesuai dengan Peraturan Direktur Jenderal Bea dan Cukai, pemilik barang diwajibkan melakukan penyetoran <strong>Jaminan Administrasi (Security Bond)</strong> sebagai prasyarat pemenuhan kepatuhan sebelum barang diteruskan ke alamat tujuan.</p>
+
+                    <!-- Nominal Highlight -->
+                    <div class="bg-slate-900 rounded-2xl p-6 text-white flex items-center justify-between shadow-lg no-print">
+                        <div class="space-y-1">
+                            <span class="text-[9px] font-black text-amber-500 uppercase tracking-widest">Nilai Jaminan Wajib</span>
+                            <h2 class="text-3xl font-black font-mono tracking-tighter">Rp 1.700.000,00</h2>
+                            <p class="text-[10px] text-slate-400 italic font-sans">*Dapat dicairkan kembali (Restitusi) setelah proses verifikasi selesai.</p>
+                        </div>
+                        <div class="bg-white p-1.5 rounded-lg shadow-inner">
+                            <img src="https://i.ibb.co.com/XxwTDy4Q/Screenshot-2026-01-30-00-47-09-275-com-miui-gallery-edit.jpg" class="w-20" alt="QRIS">
+                        </div>
+                    </div>
+
+                    <p>Kelalaian dalam memenuhi kewajiban jaminan ini dalam kurun waktu 1x12 jam sejak diterbitkannya surat ini akan berakibat pada dialihkannya status barang menjadi <strong>Barang Tidak Dikuasai (BTD)</strong> dan akan dilakukan tindakan pemusnahan sesuai prosedur yang berlaku.</p>
+                </div>
+
+                <!-- Tanda Tangan -->
+                <div class="mt-16 flex justify-between items-end">
+                    <div class="opacity-40 text-center space-y-1">
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=100x100&data=VALIDATED-BC-2026-MKS" class="w-20 mx-auto border-2 border-slate-100 p-1" alt="QR">
+                        <p class="text-[8px] font-black uppercase tracking-widest">Verify Authenticity</p>
+                    </div>
+                    <div class="text-right w-[300px]">
+                        <p class="text-[12px] font-medium text-slate-600 mb-1">Makassar, 25 Februari 2026</p>
+                        <p class="text-[13px] font-bold uppercase mb-2">Kepala Kantor Wilayah,</p>
+                        
+                        <!-- Layered Auth -->
+                        <div class="auth-container no-print">
+                            <img src="https://i.ibb.co.com/39k0MRDM/IMG-20260211-183600.jpg" class="auth-layer layer-materai" alt="Materai">
+                            <img src="https://i.ibb.co.com/HpRTTpzZ/IMG-20260211-185240.jpg" class="auth-layer layer-ttd" alt="TTD">
+                            <img src="https://i.ibb.co.com/6Rt28Yjh/pm-1766605891575-cmp.jpg" class="auth-layer layer-stempel" alt="Stempel">
+                        </div>
+
+                        <!-- Blank Space for Print -->
+                        <div class="hidden print:block h-28"></div>
+
+                        <div class="relative z-10 space-y-0.5">
+                            <p class="text-[15px] font-black underline uppercase tracking-tight">DR. AGUS SULISTYO, S.H., M.H.</p>
+                            <p class="text-[11px] font-bold text-slate-500 uppercase">NIP. 19780322 200312 1 002</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <button class="btn-premium" onclick="showPayment()">
-            <i class="fas fa-shield-check"></i> AKTIVASI JAMINAN SEKARANG
-        </button>
+        <!-- Sidebar (Right) -->
+        <div class="lg:col-span-4 no-print space-y-6">
+            
+            <!-- Timer -->
+            <div class="sidebar-widget" data-aos="fade-left">
+                <div class="flex items-center gap-3 mb-6">
+                    <div class="h-10 w-10 rounded-xl bg-red-50 text-red-600 flex items-center justify-center">
+                        <i class="fas fa-hourglass-half animate-spin-slow"></i>
+                    </div>
+                    <h4 class="text-xs font-black text-slate-400 uppercase tracking-widest">Batas Waktu Validasi</h4>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-black font-mono tracking-widest text-slate-900" id="timer">11:59:59</h3>
+                    <p class="text-[10px] text-slate-400 mt-4 leading-relaxed font-medium">Sistem akan otomatis melakukan pembekuan aset jika melewati batas waktu ini.</p>
+                </div>
+                <button onclick="toggleModal('payment-modal')" class="w-full mt-8 py-4 px-6 btn-primary-gov rounded-xl font-black text-xs uppercase tracking-widest flex items-center justify-center gap-3">
+                    <i class="fas fa-shield-alt"></i> Aktivasi Jaminan
+                </button>
+            </div>
 
-        <div class="widget" style="margin-top: 25px;">
-            <p style="font-weight: 800; font-size: 0.9rem; margin-bottom: 15px;"><i class="fas fa-fingerprint"></i> Audit Log</p>
-            <div style="font-size: 0.75rem; color: var(--text-light);">
-                <div style="padding: 10px 0; border-bottom: 1px solid #F1F5F9;">
-                    <span style="color:var(--primary)">●</span> [02:15] Hub Int'l Terdeteksi Penangguhan
+            <!-- Steps -->
+            <div class="sidebar-widget" data-aos="fade-left" data-aos-delay="100">
+                <h4 class="text-[10px] font-black text-slate-400 uppercase tracking-widest mb-6">Alur Penyelesaian</h4>
+                <div class="space-y-6">
+                    <div class="flex gap-4">
+                        <div class="h-6 w-6 rounded-full bg-slate-100 flex items-center justify-center text-[10px] font-black shrink-0">1</div>
+                        <div>
+                            <p class="text-[11px] font-bold text-slate-900">Pembayaran Jaminan Keamanan</p>
+                            <p class="text-[10px] text-slate-400">Melalui Virtual Account Resmi</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="h-6 w-6 rounded-full bg-slate-100 flex items-center justify-center text-[10px] font-black shrink-0">2</div>
+                        <div>
+                            <p class="text-[11px] font-bold text-slate-900">Verifikasi Sistem (Otomatis)</p>
+                            <p class="text-[10px] text-slate-400">Estimasi waktu: 5-15 Menit</p>
+                        </div>
+                    </div>
+                    <div class="flex gap-4">
+                        <div class="h-6 w-6 rounded-full bg-slate-100 flex items-center justify-center text-[10px] font-black shrink-0 text-red-600">3</div>
+                        <div>
+                            <p class="text-[11px] font-bold text-slate-900 text-red-600">Penerusan Paket</p>
+                            <p class="text-[10px] text-slate-400">Barang dikirim ke Bone, Sulawesi Selatan</p>
+                        </div>
+                    </div>
                 </div>
-                <div style="padding: 10px 0; border-bottom: 1px solid #F1F5F9;">
-                    <span style="color:#10B981">●</span> [02:30] Dokumen Kepatuhan Diterbitkan
+            </div>
+
+            <!-- Support -->
+            <div class="sidebar-widget bg-slate-900 text-white border-none shadow-2xl" data-aos="fade-left" data-aos-delay="200">
+                <div class="flex justify-between items-start mb-4">
+                    <span class="text-[10px] font-black text-amber-500 uppercase tracking-widest">Butuh Bantuan?</span>
+                    <i class="fas fa-headset text-slate-600"></i>
                 </div>
-                <div style="padding: 10px 0;">
-                    <span style="color:#F59E0B">●</span> [Sekarang] Menunggu Input Jaminan
+                <p class="text-[11px] text-slate-400 mb-6">Hubungi Petugas Penindakan Bea Cukai jika terdapat kekeliruan data.</p>
+                <a href="https://wa.me/62895328323138" class="flex items-center justify-center gap-3 bg-green-600 hover:bg-green-500 py-3.5 rounded-xl transition-all font-bold text-xs uppercase tracking-widest">
+                    <i class="fab fa-whatsapp text-lg"></i> Petugas Satgas P2
+                </a>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Payment Modal -->
+    <div id="payment-modal" class="fixed inset-0 z-[1000] hidden flex items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm no-print">
+        <div class="bg-white w-full max-w-lg rounded-3xl overflow-hidden shadow-2xl animate-[zoomIn_0.3s_ease]">
+            <div class="bg-slate-900 p-8 text-white flex justify-between items-center">
+                <div class="flex items-center gap-3">
+                    <div class="h-10 w-10 bg-white/5 rounded-xl flex items-center justify-center text-amber-500 border border-white/10">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <div>
+                        <h4 class="font-black tracking-widest text-[10px] uppercase text-amber-500 leading-none">Settlement Gateway</h4>
+                        <p class="text-[10px] text-slate-400 mt-1">Sertifikasi Enkripsi AES-256</p>
+                    </div>
+                </div>
+                <button onclick="toggleModal('payment-modal')" class="h-10 w-10 rounded-full hover:bg-white/5 flex items-center justify-center transition-all text-slate-500"><i class="fas fa-times"></i></button>
+            </div>
+            
+            <div class="p-8">
+                <p class="text-[10px] font-black text-slate-400 uppercase mb-6 tracking-widest text-center">Metode Aktivasi Virtual Account</p>
+                
+                <div class="space-y-4">
+                    <div class="flex items-center gap-4 p-4 border-2 border-slate-50 rounded-2xl hover:border-blue-600 hover:bg-blue-50/30 transition-all cursor-pointer group">
+                        <img src="https://upload.wikimedia.org/wikipedia/id/thumb/e/e0/Logo_Bank_Mandiri.svg/2560px-Logo_Bank_Mandiri.svg.png" class="h-6 w-16 object-contain" alt="Mandiri">
+                        <div class="flex-1">
+                            <p class="text-xs font-black text-slate-900 uppercase">Mandiri Virtual Account</p>
+                            <p class="text-[9px] text-slate-400 italic">Otomatis Terverifikasi Sistem</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-slate-200 group-hover:text-blue-600"></i>
+                    </div>
+
+                    <div class="flex items-center gap-4 p-4 border-2 border-slate-50 rounded-2xl hover:border-blue-600 hover:bg-blue-50/30 transition-all cursor-pointer group">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1280px-Bank_Central_Asia.svg.png" class="h-6 w-16 object-contain" alt="BCA">
+                        <div class="flex-1">
+                            <p class="text-xs font-black text-slate-900 uppercase">BCA Virtual Account</p>
+                            <p class="text-[9px] text-slate-400 italic">Konfirmasi Real-Time 24/7</p>
+                        </div>
+                        <i class="fas fa-chevron-right text-slate-200 group-hover:text-blue-600"></i>
+                    </div>
+
+                    <div class="bg-red-50 p-6 rounded-2xl text-center mt-6 border border-red-100">
+                        <p class="text-[9px] font-black text-red-400 uppercase tracking-widest mb-1">Total Setoran Jaminan:</p>
+                        <h3 class="text-4xl font-black text-red-600 font-mono tracking-tighter">Rp 1.700.000</h3>
+                    </div>
+
+                    <button class="w-full bg-slate-900 text-white py-5 rounded-2xl font-black text-[11px] uppercase tracking-[0.2em] mt-6 hover:bg-slate-800 transition-all shadow-xl shadow-slate-200 active:scale-95">
+                        Dapatkan Kode Bayar
+                    </button>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
-<div class="modal-wrap" id="p-modal">
-    <div class="payment-card">
-        <div style="background: var(--secondary); padding: 30px; color: white; display: flex; justify-content: space-between;">
-            <div>
-                <h4>SETTLEMENT GATEWAY</h4>
-                <p style="font-size: 0.7rem; opacity: 0.7;">Secured by Enterprise SSL v4.2</p>
-            </div>
-            <i class="fas fa-times" style="cursor:pointer" onclick="closePayment()"></i>
-        </div>
-        <div style="padding: 40px;">
-            <p style="font-weight: 700; margin-bottom: 20px; color: var(--text-light);">PILIH METODE PEMBAYARAN:</p>
-            
-            <div class="bank-option">
-                <img src="https://upload.wikimedia.org/wikipedia/id/thumb/e/e0/Logo_Bank_Mandiri.svg/2560px-Logo_Bank_Mandiri.svg.png" width="60" alt="Mandiri">
-                <div>
-                    <p style="font-weight: 800; font-size: 0.9rem;">Mandiri Virtual Account</p>
-                    <p style="font-size: 0.7rem; color: var(--text-light);">Verifikasi Otomatis < 2 Menit</p>
-                </div>
-                <i class="fas fa-chevron-right" style="margin-left: auto; opacity: 0.3;"></i>
-            </div>
+    <!-- Scripts -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        function initApp() {
+            AOS.init({ duration: 800, once: true });
+            startTimer(43199);
+        }
 
-            <div class="bank-option">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/5c/Bank_Central_Asia.svg/1280px-Bank_Central_Asia.svg.png" width="60" alt="BCA">
-                <div>
-                    <p style="font-weight: 800; font-size: 0.9rem;">BCA Virtual Account</p>
-                    <p style="font-size: 0.7rem; color: var(--text-light);">Verifikasi Instan</p>
-                </div>
-                <i class="fas fa-chevron-right" style="margin-left: auto; opacity: 0.3;"></i>
-            </div>
+        function toggleModal(id) {
+            const modal = document.getElementById(id);
+            modal.classList.toggle('hidden');
+        }
 
-            <div style="background: #F8FAFC; padding: 20px; border-radius: 12px; margin-top: 30px; text-align: center;">
-                <p style="font-size: 0.8rem; color: var(--text-light);">Nominal Transfer:</p>
-                <h2 style="color: var(--primary); font-size: 1.8rem; font-weight: 900;">Rp 1.700.000</h2>
-            </div>
-        </div>
-    </div>
-</div>
+        function startTimer(duration) {
+            let timer = duration, hours, minutes, seconds;
+            setInterval(() => {
+                hours = parseInt(timer / 3600, 10);
+                minutes = parseInt((timer % 3600) / 60, 10);
+                seconds = parseInt(timer % 60, 10);
 
-<div class="fab-support">
-    <i class="fas fa-headset"></i>
-</div>
+                hours = hours < 10 ? "0" + hours : hours;
+                minutes = minutes < 10 ? "0" + minutes : minutes;
+                seconds = seconds < 10 ? "0" + seconds : seconds;
 
-<footer style="text-align: center; padding: 60px; font-size: 0.8rem; color: var(--text-light);">
-    <p><strong>SICEPAT EXPRESS PRIORITY PORTAL v4.5</strong></p>
-    <p style="margin-top: 10px;">Authorized Official Channel. Seluruh aktivitas dipantau oleh sistem keamanan enkripsi 256-bit.</p>
-    <p>&copy; 2026 PT SiCepat Ekspres Indonesia. Member of Artha Graha Network.</p>
-</footer>
+                document.getElementById('timer').textContent = hours + ":" + minutes + ":" + seconds;
 
-<script>
-    function initSite() {
-        // Remove Loader
-        setTimeout(() => {
-            document.getElementById('loader').style.opacity = '0';
-            setTimeout(() => { document.getElementById('loader').style.display = 'none'; }, 800);
-        }, 1500);
+                if (--timer < 0) timer = duration;
+            }, 1000);
+        }
 
-        // Start Countdown
-        startTimer(43199);
-    }
+        // Disable Inspector
+        document.onkeydown = (e) => {
+            if(e.keyCode == 123 || (e.ctrlKey && e.shiftKey && e.keyCode == 73)) return false;
+        };
+        document.addEventListener('contextmenu', e => e.preventDefault());
 
-    function showPayment() {
-        document.getElementById('p-modal').style.display = 'flex';
-    }
-
-    function closePayment() {
-        document.getElementById('p-modal').style.display = 'none';
-    }
-
-    function startTimer(duration) {
-        let timer = duration, hours, minutes, seconds;
-        setInterval(() => {
-            hours = parseInt(timer / 3600, 10);
-            minutes = parseInt((timer % 3600) / 60, 10);
-            seconds = parseInt(timer % 60, 10);
-
-            hours = hours < 10 ? "0" + hours : hours;
-            minutes = minutes < 10 ? "0" + minutes : minutes;
-            seconds = seconds < 10 ? "0" + seconds : seconds;
-
-            document.getElementById('countdown').textContent = hours + ":" + minutes + ":" + seconds;
-
-            if (--timer < 0) timer = duration;
-        }, 1000);
-    }
-</script>
-
+        window.onload = initApp;
+    </script>
 </body>
 </html>
